@@ -1,0 +1,296 @@
+/* ===== スマホ・Wi-Fi・回線相談 詳細ページ ===== */
+
+/* ---------- Detail hero ---------- */
+.detail-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 22px 0 32px;
+}
+
+.detail-hero-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "title figure"
+    "subcopy subcopy"
+    "ctas ctas";
+  column-gap: 14px;
+  row-gap: 14px;
+  align-items: start;
+  text-align: left;
+}
+
+.detail-title {
+  grid-area: title;
+  margin: 0;
+  font-size: 17px;
+  font-weight: 900;
+  line-height: 1.5;
+  color: var(--navy);
+  letter-spacing: 0;
+}
+
+.detail-title .accent {
+  color: var(--red);
+}
+
+.detail-figure {
+  grid-area: figure;
+  align-self: center;
+  width: 64px;
+  margin: 0;
+}
+
+.detail-figure img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 10px 16px rgba(226, 52, 43, 0.18));
+}
+
+.detail-subcopy {
+  grid-area: subcopy;
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.75;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+
+.detail-hero .hero-ctas {
+  grid-area: ctas;
+}
+
+/* ---------- こんなお悩みありませんか ---------- */
+.detail-worries-section {
+  padding: 8px 0 28px;
+}
+
+.worry-check-grid {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.worry-check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  background: var(--white);
+  border: 1px solid rgba(27, 42, 74, 0.08);
+  border-radius: 14px;
+  padding: 12px 10px;
+  box-shadow: 0 6px 14px rgba(27, 42, 74, 0.06);
+}
+
+.worry-check-item .check {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--red);
+}
+
+.worry-check-item span {
+  font-size: 12.5px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--navy);
+}
+
+/* ---------- ご案内できる回線・Wi-Fi ---------- */
+.detail-lineup-section {
+  padding: 0 0 48px;
+}
+
+.lineup-note {
+  margin: 10px 0 20px;
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.7;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+
+.lineup-group-title {
+  margin: 0 0 10px;
+  font-size: 14.5px;
+  font-weight: 800;
+  color: var(--red-dark);
+}
+
+.lineup-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin: 0 0 24px;
+}
+
+.lineup-grid.is-single {
+  grid-template-columns: 1fr;
+}
+
+.lineup-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--white);
+  border: 1.5px solid var(--red-light);
+  border-radius: 14px;
+  padding: 12px 14px;
+  box-shadow: var(--shadow-soft);
+}
+
+.lineup-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--red-light);
+  color: var(--red);
+  flex-shrink: 0;
+}
+
+.lineup-icon svg {
+  width: 58%;
+  height: 58%;
+}
+
+.lineup-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.lineup-card-text strong {
+  font-size: 13.5px;
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1.3;
+}
+
+.lineup-card-text em {
+  font-style: normal;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--red-dark);
+}
+
+/* ---------- Responsive ---------- */
+@media (min-width: 720px) {
+  .detail-title {
+    font-size: 23px;
+  }
+
+  .detail-subcopy {
+    font-size: 15px;
+  }
+
+  .detail-figure {
+    width: 96px;
+  }
+
+  .detail-hero .hero-ctas {
+    flex-direction: row;
+  }
+
+  .worry-check-item span {
+    font-size: 13.5px;
+  }
+
+  .lineup-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .lineup-grid.is-single {
+    grid-template-columns: 1fr;
+  }
+
+  .lineup-grid.is-single .lineup-card {
+    max-width: 280px;
+  }
+}
+
+@media (min-width: 960px) {
+  .detail-hero {
+    padding: 48px 0 56px;
+  }
+
+  .detail-hero-inner {
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    grid-template-areas:
+      "title figure"
+      "subcopy figure"
+      "ctas figure";
+    column-gap: 48px;
+    row-gap: 18px;
+  }
+
+  .detail-title {
+    font-size: 36px;
+  }
+
+  .detail-subcopy {
+    font-size: 16px;
+    max-width: 34em;
+  }
+
+  .detail-figure {
+    width: 100%;
+    max-width: 220px;
+    margin: 0 auto;
+  }
+
+  .detail-hero .hero-ctas {
+    max-width: 480px;
+  }
+
+  .detail-worries-section {
+    padding: 12px 0 40px;
+  }
+
+  .worry-check-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .worry-check-item {
+    padding: 16px 14px;
+  }
+
+  .worry-check-item span {
+    font-size: 14.5px;
+  }
+
+  .detail-lineup-section {
+    padding: 0 0 64px;
+  }
+
+  .lineup-note {
+    font-size: 15px;
+  }
+
+  .lineup-group-title {
+    font-size: 16px;
+  }
+
+  .lineup-card {
+    padding: 16px 18px;
+  }
+
+  .lineup-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .lineup-card-text strong {
+    font-size: 15px;
+  }
+}

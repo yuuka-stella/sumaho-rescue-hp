@@ -1,0 +1,274 @@
+/* ===== 店舗情報・ご相談方法 ===== */
+
+.ct-intro-section {
+  padding: 22px 0 14px;
+  text-align: center;
+}
+
+.ct-intro-section .section-title {
+  font-size: 22px;
+}
+
+.ct-intro-desc {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.7;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+
+/* ---------- こんな方でも安心です ---------- */
+.ct-trust-section {
+  padding: 8px 0 20px;
+}
+
+.ct-trust-section .trust-list {
+  padding: 10px;
+  gap: 6px 10px;
+}
+
+/* ---------- ご相談方法 ---------- */
+.ct-methods-section {
+  padding: 0 0 20px;
+}
+
+.method-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.method-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: var(--white);
+  border: 1.5px solid var(--red-light);
+  border-radius: 16px;
+  padding: 12px 14px;
+  box-shadow: var(--shadow-soft);
+}
+
+.method-card.is-line {
+  border-color: rgba(6, 199, 85, 0.25);
+}
+
+.method-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  color: var(--white);
+}
+
+.method-card.is-line .method-icon {
+  background: var(--line-green);
+}
+
+.method-card.is-tel .method-icon,
+.method-card.is-store .method-icon {
+  background: var(--red);
+}
+
+.method-icon svg {
+  width: 55%;
+  height: 55%;
+}
+
+.method-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  padding-top: 2px;
+}
+
+.method-text strong {
+  font-family: var(--font-heading);
+  font-size: 14.5px;
+  font-weight: 900;
+  color: var(--navy);
+}
+
+.method-text em {
+  font-style: normal;
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+
+.method-note {
+  display: block;
+  margin-top: 4px;
+  font-size: 10.5px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: var(--navy-soft);
+  opacity: 0.85;
+}
+
+.method-price {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  background: var(--red-light);
+  color: var(--red-dark);
+  font-size: 11.5px;
+  font-weight: 700;
+}
+
+.method-hours {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  background: rgba(27, 42, 74, 0.07);
+  color: var(--navy);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* ---------- 店舗だからこその安心 ---------- */
+.ct-benefit-section {
+  padding: 0 0 20px;
+}
+
+.worry-check-grid {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.worry-check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  background: var(--white);
+  border: 1px solid rgba(27, 42, 74, 0.08);
+  border-radius: 14px;
+  padding: 12px 10px;
+  box-shadow: 0 6px 14px rgba(27, 42, 74, 0.06);
+}
+
+.worry-check-item .check {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--red);
+}
+
+.worry-check-item span {
+  font-size: 12.5px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--navy);
+}
+
+/* ---------- 最後のCTA ---------- */
+.ct-cta-section {
+  padding: 0 0 36px;
+  text-align: center;
+}
+
+.ct-cta-section .section-title {
+  margin-bottom: 14px;
+}
+
+.ct-cta {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* ---------- Responsive ---------- */
+@media (min-width: 720px) {
+  .ct-intro-section .section-title {
+    font-size: 26px;
+  }
+
+  .ct-intro-desc {
+    font-size: 15px;
+  }
+
+  .method-list {
+    flex-direction: row;
+  }
+
+  .method-card {
+    flex: 1 1 0;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 20px 16px;
+  }
+
+  .method-text {
+    align-items: center;
+    text-align: center;
+    padding-top: 0;
+  }
+
+  .worry-check-item span {
+    font-size: 13.5px;
+  }
+
+  .ct-cta {
+    flex-direction: row;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 960px) {
+  .ct-intro-section {
+    padding: 40px 0 20px;
+  }
+
+  .ct-intro-section .section-title {
+    font-size: 30px;
+  }
+
+  .ct-trust-section .trust-list {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .method-list {
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 16px;
+  }
+
+  .method-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .method-text strong {
+    font-size: 16px;
+  }
+
+  .method-text em {
+    font-size: 13px;
+  }
+
+  .worry-check-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+
+  .worry-check-item {
+    padding: 16px 14px;
+  }
+
+  .ct-cta {
+    max-width: 480px;
+  }
+}
