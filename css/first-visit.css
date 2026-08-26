@@ -1,0 +1,314 @@
+/* ===== 初めての方へ｜ご相談・来店の流れ ===== */
+
+/* ---------- Hero ---------- */
+.fv-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 22px 0 32px;
+}
+
+.fv-hero-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "title figure"
+    "subhead subhead"
+    "desc desc"
+    "ctas ctas";
+  column-gap: 14px;
+  row-gap: 12px;
+  align-items: start;
+  text-align: left;
+}
+
+.fv-title {
+  grid-area: title;
+  margin: 0;
+  font-size: 21px;
+  font-weight: 900;
+  line-height: 1.4;
+  color: var(--navy);
+}
+
+.fv-figure {
+  grid-area: figure;
+  align-self: center;
+  width: 64px;
+  margin: 0;
+}
+
+.fv-figure img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 10px 16px rgba(226, 52, 43, 0.18));
+}
+
+.fv-subhead {
+  grid-area: subhead;
+  margin: 0;
+  font-size: 14.5px;
+  font-weight: 800;
+  line-height: 1.6;
+  color: var(--navy);
+}
+
+.fv-desc {
+  grid-area: desc;
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.75;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+
+.fv-hero .hero-ctas {
+  grid-area: ctas;
+}
+
+/* ---------- ご相談から解決まで ---------- */
+.fv-steps-section {
+  padding: 6px 0 18px;
+}
+
+.step-list {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.step-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--white);
+  border: 1.5px solid var(--red-light);
+  border-radius: 16px;
+  padding: 10px 14px;
+  box-shadow: var(--shadow-soft);
+}
+
+.step-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 32px;
+  top: 100%;
+  width: 2px;
+  height: 10px;
+  background: var(--red-light);
+}
+
+.step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--red);
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 900;
+  box-shadow: 0 6px 12px rgba(226, 52, 43, 0.25);
+}
+
+.step-text {
+  min-width: 0;
+}
+
+.step-text h3 {
+  margin: 0 0 2px;
+  font-size: 15px;
+  font-weight: 900;
+  color: var(--navy);
+  line-height: 1.3;
+}
+
+.step-text p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.45;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+
+/* ---------- 相談だけでもOK ---------- */
+.fv-assure-section {
+  padding: 0 0 16px;
+}
+
+.fv-assure-box {
+  background: var(--yellow);
+  border-radius: var(--radius-lg);
+  padding: 16px 20px;
+  text-align: center;
+}
+
+.fv-assure-main {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.4;
+  color: var(--navy);
+}
+
+.fv-assure-sub {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.55;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+
+/* ---------- 安心ポイント ---------- */
+.fv-trust-section {
+  padding: 0 0 20px;
+}
+
+.fv-trust-section .trust-list {
+  padding: 10px;
+  gap: 6px 10px;
+}
+
+/* ---------- 最後のCTA ---------- */
+.fv-cta-section {
+  padding: 0 0 32px;
+  text-align: center;
+}
+
+.fv-cta-section .section-title {
+  margin-bottom: 10px;
+}
+
+.fv-cta {
+  max-width: 480px;
+  margin: 0 auto;
+  gap: 8px;
+}
+
+/* ---------- Responsive ---------- */
+@media (min-width: 720px) {
+  .fv-title {
+    font-size: 27px;
+  }
+
+  .fv-subhead {
+    font-size: 17px;
+  }
+
+  .fv-desc {
+    font-size: 15px;
+  }
+
+  .fv-figure {
+    width: 96px;
+  }
+
+  .fv-hero .hero-ctas {
+    flex-direction: row;
+  }
+
+  .step-item {
+    padding: 18px 20px;
+  }
+
+  .step-text h3 {
+    font-size: 16.5px;
+  }
+
+  .step-text p {
+    font-size: 13.5px;
+  }
+
+  .fv-assure-main {
+    font-size: 21px;
+  }
+
+  .fv-assure-sub {
+    font-size: 14px;
+  }
+
+  .fv-cta {
+    flex-direction: row;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 960px) {
+  .fv-hero {
+    padding: 48px 0 56px;
+  }
+
+  .fv-hero-inner {
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    grid-template-areas:
+      "title figure"
+      "subhead figure"
+      "desc figure"
+      "ctas figure";
+    column-gap: 48px;
+    row-gap: 16px;
+  }
+
+  .fv-title {
+    font-size: 34px;
+  }
+
+  .fv-desc {
+    max-width: 34em;
+  }
+
+  .fv-figure {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  .fv-hero .hero-ctas {
+    max-width: 460px;
+  }
+
+  .fv-steps-section {
+    padding: 12px 0 40px;
+  }
+
+  .step-list {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .fv-assure-section {
+    padding: 0 0 40px;
+  }
+
+  .fv-assure-box {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 32px 40px;
+  }
+
+  .fv-trust-section {
+    padding: 0 0 40px;
+  }
+
+  .fv-trust-section .trust-list {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .fv-cta-section {
+    padding: 0 0 64px;
+  }
+
+  .fv-cta {
+    max-width: 480px;
+  }
+}
