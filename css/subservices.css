@@ -1,0 +1,131 @@
+/* ===== 設定・データ移行 / コーティング / スマホ教室 / 資格取得 詳細ページ ===== */
+
+.sub-intro-section {
+  padding-top: 20px;
+}
+
+.sub-intro-desc {
+  margin: 0 0 18px;
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.75;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+
+/* ---------- こんな方におすすめ ---------- */
+.sub-worries-section {
+  padding: 8px 0 20px;
+}
+
+.worry-check-grid {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.worry-check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  background: var(--white);
+  border: 1px solid rgba(27, 42, 74, 0.08);
+  border-radius: 14px;
+  padding: 12px 10px;
+  box-shadow: 0 6px 14px rgba(27, 42, 74, 0.06);
+}
+
+.worry-check-item .check {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--red);
+}
+
+.worry-check-item span {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--navy);
+}
+
+/* ---------- 安心ポイント + CTA ---------- */
+.sub-trust-section {
+  padding: 0 0 40px;
+}
+
+.sub-trust-section .trust-list {
+  margin: 0 0 20px;
+}
+
+.sub-cta {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* ---------- Responsive ---------- */
+@media (min-width: 720px) {
+  .sub-intro-desc {
+    font-size: 15px;
+  }
+
+  .worry-check-grid {
+    gap: 10px;
+  }
+
+  .worry-check-item span {
+    font-size: 13.5px;
+  }
+
+  .sub-cta {
+    flex-direction: row;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 960px) {
+  .sub-intro-section {
+    padding-top: 32px;
+  }
+
+  .sub-intro-desc {
+    font-size: 16px;
+    max-width: 40em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .sub-worries-section {
+    padding: 12px 0 32px;
+  }
+
+  .worry-check-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .worry-check-item {
+    padding: 16px 14px;
+  }
+
+  .worry-check-item span {
+    font-size: 14.5px;
+  }
+
+  .sub-trust-section {
+    padding: 0 0 56px;
+  }
+
+  .sub-trust-section .trust-list {
+    max-width: 720px;
+    margin: 0 auto 24px;
+  }
+
+  .sub-cta {
+    max-width: 480px;
+  }
+}
