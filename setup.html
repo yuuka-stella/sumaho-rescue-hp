@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>設定・データ移行｜スマホレスキューかごしま</title>
+<meta name="description" content="機種変更したけど、そのあとが分からない。データ移行から各種設定まで、まとめてサポートする「スマホレスキューかごしま」の設定・データ移行ページです。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/setup.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand" aria-label="スマホレスキューかごしま トップへ">
+      <img class="brand-logo" src="assets/logo.png" alt="スマホレスキューかごしま">
+    </a>
+
+    <div class="header-actions">
+      <a class="btn-header is-line" href="https://line.me/" target="_blank" rel="noopener" aria-label="LINEで無料相談">
+        <svg class="btn-header-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3C6.48 3 2 6.69 2 11.2c0 4 3.53 7.36 8.31 8.02.32.07.76.21.87.49.1.25.06.65.03.9l-.14.9c-.04.25-.2.98.86.53s5.69-3.35 7.76-5.74C21.02 14.5 22 12.95 22 11.2 22 6.69 17.52 3 12 3Z" fill="currentColor"/></svg>
+        <span>LINEで無料相談</span>
+      </a>
+      <a class="btn-header is-tel" href="tel:0000000000" aria-label="電話で予約">
+        <svg class="btn-header-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1.1.5 1.1 1.1V20c0 .6-.5 1.1-1.1 1.1C10.6 21.1 2.9 13.4 2.9 3.9 2.9 3.3 3.4 2.8 4 2.8h3.3c.6 0 1.1.5 1.1 1.1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1L6.6 10.8Z" fill="currentColor"/></svg>
+        <span>電話で予約</span>
+      </a>
+      <button class="hamburger" type="button" aria-label="メニューを開く" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <nav class="mobile-menu" aria-label="モバイルメニュー">
+    <div class="mobile-menu-inner">
+      <ul class="mobile-menu-nav">
+        <li><a href="index.html">TOP</a></li>
+        <li><a href="wifi.html">スマホ・Wi‑Fi・回線相談</a></li>
+        <li><a href="repair.html">スマホ修理</a></li>
+        <li><a href="wifi.html">料金診断</a></li>
+        <li><a href="wifi.html">スマートホーム</a></li>
+        <li><a href="subservices.html">まとめてサポート</a></li>
+        <li><a href="setup.html">設定・データ移行</a></li>
+        <li><a href="coating.html">コーティング</a></li>
+        <li><a href="class.html">スマホ教室</a></li>
+        <li><a href="license.html">スマホの資格取得</a></li>
+        <li><a href="first-visit.html">初めての方へ</a></li>
+        <li><a href="faq.html">よくある質問・Instagram</a></li>
+      </ul>
+
+      <a class="btn-header is-line" href="https://line.me/" target="_blank" rel="noopener">
+        <svg class="btn-header-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3C6.48 3 2 6.69 2 11.2c0 4 3.53 7.36 8.31 8.02.32.07.76.21.87.49.1.25.06.65.03.9l-.14.9c-.04.25-.2.98.86.53s5.69-3.35 7.76-5.74C21.02 14.5 22 12.95 22 11.2 22 6.69 17.52 3 12 3Z" fill="currentColor"/></svg>
+        <span>LINEで無料相談</span>
+      </a>
+      <a class="btn-header is-tel" href="tel:0000000000">
+        <svg class="btn-header-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1.1.5 1.1 1.1V20c0 .6-.5 1.1-1.1 1.1C10.6 21.1 2.9 13.4 2.9 3.9 2.9 3.3 3.4 2.8 4 2.8h3.3c.6 0 1.1.5 1.1 1.1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1L6.6 10.8Z" fill="currentColor"/></svg>
+        <span>電話で予約</span>
+      </a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <!-- ① ファーストビュー -->
+  <section class="st-hero" aria-label="設定・データ移行 メインビジュアル">
+    <div class="hero-blob blob-1" aria-hidden="true"></div>
+    <div class="hero-blob blob-2" aria-hidden="true"></div>
+
+    <div class="container st-hero-inner">
+      <h1 class="st-title">機種変更したけど、<br class="card-break">そのあとが分からない。</h1>
+
+      <div class="st-figure">
+        <img src="assets/naosuke.png" alt="スマホレスキューかごしまの公式キャラクター なおすけ。赤いヘルメットに白い十字、赤い作業服姿で、笑顔で親指を立てている。">
+      </div>
+
+      <p class="st-subhead">データ移行から各種設定まで、<br class="br-mobile">まとめてサポートします。</p>
+
+      <p class="st-desc">
+        連絡先・アプリ・メール・LINE・eSIMなど、<br class="br-mobile">
+        新しいスマホを“使える状態”まで一緒に整えます。
+      </p>
+
+      <div class="hero-ctas st-hero-ctas">
+        <a class="btn-cta is-line" href="https://line.me/" target="_blank" rel="noopener">
+          <svg class="cta-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3C6.48 3 2 6.69 2 11.2c0 4 3.53 7.36 8.31 8.02.32.07.76.21.87.49.1.25.06.65.03.9l-.14.9c-.04.25-.2.98.86.53s5.69-3.35 7.76-5.74C21.02 14.5 22 12.95 22 11.2 22 6.69 17.52 3 12 3Z" fill="currentColor"/></svg>
+          LINEで事前相談
+        </a>
+        <a class="btn-cta is-tel" href="tel:0000000000">
+          <svg class="cta-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1.1.5 1.1 1.1V20c0 .6-.5 1.1-1.1 1.1C10.6 21.1 2.9 13.4 2.9 3.9 2.9 3.3 3.4 2.8 4 2.8h3.3c.6 0 1.1.5 1.1 1.1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1L6.6 10.8Z" fill="currentColor"/></svg>
+          電話で予約
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ② 料金の目安 -->
+  <section class="st-teaser-section" aria-label="料金の目安">
+    <div class="container st-teaser-inner">
+      <p class="st-teaser-label">まずは料金の目安</p>
+      <div class="st-teaser-grid">
+        <div class="st-teaser-card">
+          <span class="st-teaser-name">基本サポート</span>
+          <span class="st-teaser-price">1,000円<small>〜</small></span>
+        </div>
+        <div class="st-teaser-card">
+          <span class="st-teaser-name">eSIM設定</span>
+          <span class="st-teaser-price">1,000円</span>
+        </div>
+      </div>
+      <a class="st-teaser-link" href="#st-pricing">料金一覧を見る ↓</a>
+    </div>
+  </section>
+
+  <!-- ③ こんなお悩みありませんか？ -->
+  <section class="st-worries-section" aria-label="こんなお悩みありませんか？">
+    <div class="container">
+      <h2 class="section-title">こんなお悩み<br class="card-break">ありませんか？</h2>
+
+      <ul class="st-worry-grid">
+        <li class="st-worry-item">
+          <svg class="st-worry-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="8.5" stroke="currentColor" stroke-width="1.6"/><path d="M7.8 8a2.2 2.2 0 0 1 4.2.9c0 1.4-2 1.5-2 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="10" cy="14.3" r="0.9" fill="currentColor"/></svg>
+          <span>新しいスマホの初期設定が分からない</span>
+        </li>
+        <li class="st-worry-item">
+          <svg class="st-worry-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="8.5" stroke="currentColor" stroke-width="1.6"/><path d="M7.8 8a2.2 2.2 0 0 1 4.2.9c0 1.4-2 1.5-2 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="10" cy="14.3" r="0.9" fill="currentColor"/></svg>
+          <span>LINEや連絡先を引き継ぎたい</span>
+        </li>
+        <li class="st-worry-item">
+          <svg class="st-worry-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="8.5" stroke="currentColor" stroke-width="1.6"/><path d="M7.8 8a2.2 2.2 0 0 1 4.2.9c0 1.4-2 1.5-2 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="10" cy="14.3" r="0.9" fill="currentColor"/></svg>
+          <span>eSIMの設定方法が分からない</span>
+        </li>
+        <li class="st-worry-item">
+          <svg class="st-worry-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="8.5" stroke="currentColor" stroke-width="1.6"/><path d="M7.8 8a2.2 2.2 0 0 1 4.2.9c0 1.4-2 1.5-2 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="10" cy="14.3" r="0.9" fill="currentColor"/></svg>
+          <span>メールが使えなくなった</span>
+        </li>
+        <li class="st-worry-item">
+          <svg class="st-worry-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="8.5" stroke="currentColor" stroke-width="1.6"/><path d="M7.8 8a2.2 2.2 0 0 1 4.2.9c0 1.4-2 1.5-2 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="10" cy="14.3" r="0.9" fill="currentColor"/></svg>
+          <span>アプリを入れて使える状態にしてほしい</span>
+        </li>
+        <li class="st-worry-item">
+          <svg class="st-worry-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="8.5" stroke="currentColor" stroke-width="1.6"/><path d="M7.8 8a2.2 2.2 0 0 1 4.2.9c0 1.4-2 1.5-2 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="10" cy="14.3" r="0.9" fill="currentColor"/></svg>
+          <span>機種変更後の設定をまとめてお願いしたい</span>
+        </li>
+        <li class="st-worry-item">
+          <svg class="st-worry-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="8.5" stroke="currentColor" stroke-width="1.6"/><path d="M7.8 8a2.2 2.2 0 0 1 4.2.9c0 1.4-2 1.5-2 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="10" cy="14.3" r="0.9" fill="currentColor"/></svg>
+          <span>自分で設定するのが不安</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ④ こんな設定に対応しています -->
+  <section class="st-categories-section" aria-label="こんな設定に対応しています">
+    <div class="container">
+      <h2 class="section-title">こんな設定に<br class="card-break">対応しています</h2>
+
+      <div class="st-category-list">
+        <details class="st-category">
+          <summary>
+            <span class="st-category-icon">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 11.5 12 5l8 6.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 10.5V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-8.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span class="st-category-text">
+              <span class="st-category-name">初期設定・データ移行</span>
+              <span class="st-category-desc">初期設定やデータ移行をまとめて対応します</span>
+            </span>
+            <svg class="st-category-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <ul class="st-tag-list">
+            <li>初期設定</li>
+            <li>アドレス帳・既存アプリ移行</li>
+            <li>アドレス帳整理</li>
+            <li>ワンタッチダイヤル</li>
+            <li>SIMロック解除</li>
+            <li>eSIM設定</li>
+          </ul>
+        </details>
+
+        <details class="st-category">
+          <summary>
+            <span class="st-category-icon">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="5.5" width="17" height="13" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M4.5 7 12 12.5 19.5 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span class="st-category-text">
+              <span class="st-category-name">メール設定</span>
+              <span class="st-category-desc">各種メールの設定に対応します</span>
+            </span>
+            <svg class="st-category-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <ul class="st-tag-list">
+            <li>キャリアメール設定</li>
+            <li>eメール設定</li>
+            <li>Yahoo!メール設定</li>
+          </ul>
+        </details>
+
+        <details class="st-category">
+          <summary>
+            <span class="st-category-icon">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.6" stroke="currentColor" stroke-width="1.6"/><rect x="13" y="4" width="7" height="7" rx="1.6" stroke="currentColor" stroke-width="1.6"/><rect x="4" y="13" width="7" height="7" rx="1.6" stroke="currentColor" stroke-width="1.6"/><rect x="13" y="13" width="7" height="7" rx="1.6" stroke="currentColor" stroke-width="1.6"/></svg>
+            </span>
+            <span class="st-category-text">
+              <span class="st-category-name">アプリ・SNS設定</span>
+              <span class="st-category-desc">よく使うアプリやSNSを設定します</span>
+            </span>
+            <svg class="st-category-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <ul class="st-tag-list">
+            <li>LINE</li>
+            <li>Instagram</li>
+            <li>Facebook</li>
+            <li>X（Twitter）</li>
+            <li>YouTube</li>
+            <li>TikTok</li>
+            <li>PayPay</li>
+            <li>Amazon</li>
+            <li>GOタクシー</li>
+            <li>鹿児島市アプリ</li>
+            <li>ポケカラ</li>
+            <li>その他アプリ設定</li>
+          </ul>
+        </details>
+
+        <details class="st-category">
+          <summary>
+            <span class="st-category-icon">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M10 17h4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+            </span>
+            <span class="st-category-text">
+              <span class="st-category-name">その他の端末サポート</span>
+              <span class="st-category-desc">初期化や更新などにも対応します</span>
+            </span>
+            <svg class="st-category-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <ul class="st-tag-list">
+            <li>検索サポート</li>
+            <li>端末初期化</li>
+            <li>ソフトウェア更新</li>
+            <li>OSアップグレード</li>
+          </ul>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑤ 料金一覧 -->
+  <section class="st-pricing-section" id="st-pricing" aria-label="料金一覧">
+    <div class="container">
+      <h2 class="section-title">料金一覧</h2>
+      <p class="st-pricing-lead">カテゴリをタップすると、詳しい料金が確認できます。</p>
+
+      <div class="st-price-list">
+        <details class="st-price-group" open>
+          <summary>
+            <span class="st-price-group-text">
+              <span class="st-price-group-name">基本設定</span>
+              <span class="st-price-group-hint">初期設定 <strong>3,000円</strong>〜</span>
+            </span>
+            <svg class="st-category-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <ul class="st-price-rows">
+            <li><span>初期設定</span><strong>3,000円</strong></li>
+            <li><span>ワンタッチダイヤル</span><strong>1,000円</strong></li>
+            <li><span>アドレス帳整理</span><strong>2,000円</strong></li>
+            <li><span>SIMロック解除</span><strong>2,000円</strong></li>
+            <li><span>eSIM設定</span><strong>1,000円</strong></li>
+          </ul>
+        </details>
+
+        <details class="st-price-group">
+          <summary>
+            <span class="st-price-group-text">
+              <span class="st-price-group-name">メール設定</span>
+              <span class="st-price-group-hint">キャリアメール設定 <strong>1,000円</strong>〜</span>
+            </span>
+            <svg class="st-category-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <ul class="st-price-rows">
+            <li><span>キャリアメール設定</span><strong>1,000円</strong></li>
+            <li><span>eメール設定</span><strong>1,000円</strong></li>
+            <li><span>Yahoo!メール設定</span><strong>1,000円</strong></li>
+          </ul>
+        </details>
+
+        <details class="st-price-group">
+          <summary>
+            <span class="st-price-group-text">
+              <span class="st-price-group-name">アプリ・SNS設定</span>
+              <span class="st-price-group-hint">LINE設定 <strong>2,000円</strong>〜</span>
+            </span>
+            <svg class="st-category-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <ul class="st-price-rows">
+            <li><span>LINE設定</span><strong>2,000円</strong></li>
+            <li><span>Instagram設定</span><strong>2,000円</strong></li>
+            <li><span>Facebook設定</span><strong>2,000円</strong></li>
+            <li><span>X（Twitter）設定</span><strong>2,000円</strong></li>
+            <li><span>YouTube設定</span><strong>2,000円</strong></li>
+            <li><span>TikTok設定</span><strong>2,000円</strong></li>
+            <li><span>PayPay設定</span><strong>3,000円</strong></li>
+            <li><span>Amazon設定</span><strong>2,000円</strong></li>
+            <li><span>GOタクシー設定</span><strong>2,000円</strong></li>
+            <li><span>鹿児島市アプリ設定</span><strong>1,000円</strong></li>
+            <li><span>ポケカラ設定</span><strong>2,000円</strong></li>
+            <li><span>アプリ設定</span><strong>1,000円</strong></li>
+          </ul>
+        </details>
+
+        <details class="st-price-group">
+          <summary>
+            <span class="st-price-group-text">
+              <span class="st-price-group-name">その他</span>
+              <span class="st-price-group-hint">検索サポート <strong>1,000円</strong>〜</span>
+            </span>
+            <svg class="st-category-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <ul class="st-price-rows">
+            <li><span>検索サポート</span><strong>1,000円</strong></li>
+            <li><span>端末初期化</span><strong>2,000円</strong></li>
+            <li><span>ソフトウェア更新</span><strong>1,000円</strong></li>
+            <li><span>OSアップグレード</span><strong>1,000円</strong></li>
+          </ul>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑥ データ移行について -->
+  <section class="st-migration-section" aria-label="データ移行もおまかせください">
+    <div class="container">
+      <span class="st-migration-icon">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.5" y="5" width="8" height="14" rx="1.6" stroke="currentColor" stroke-width="1.6"/><rect x="13.5" y="5" width="8" height="14" rx="1.6" stroke="currentColor" stroke-width="1.6"/><path d="M11 10.5h2M11 13.5h2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M12.5 9l1.8 1.5-1.8 1.5M11.5 13l-1.8 1.5 1.8 1.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <h2 class="section-title">データ移行も<br class="card-break">おまかせください</h2>
+      <p class="st-migration-desc">機種変更時の連絡先や既存アプリなど、新しいスマホへ移行するお手伝いをします。</p>
+      <p class="st-migration-note">
+        端末・OS・アプリ・アカウントの状態によって、<br class="br-mobile">
+        移行できる内容や方法が異なる場合があります。<br class="br-mobile">
+        事前に状態を確認してご案内します。
+      </p>
+    </div>
+  </section>
+
+  <!-- ⑦ eSIM設定 -->
+  <section class="st-esim-section" aria-label="eSIMの設定も対応します">
+    <div class="container">
+      <div class="st-esim-box">
+        <span class="st-esim-badge">eSIM対応</span>
+        <span class="st-esim-icon">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="2.4" stroke="currentColor" stroke-width="1.7"/><rect x="8" y="7" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.5"/><path d="M9 16.5h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </span>
+        <p class="st-esim-title">eSIMの設定も対応します</p>
+        <p class="st-esim-desc">eSIMの設定が分からない、開通後につながらないなどのご相談にも対応します。</p>
+        <p class="st-esim-price">1,000円</p>
+        <p class="st-esim-note">※通信会社や契約状況によって操作内容が異なるため、事前に確認させていただきます。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑧ サポートの流れ -->
+  <section class="st-flow-section" aria-label="サポートの流れ">
+    <div class="container">
+      <h2 class="section-title">サポートの流れ</h2>
+
+      <ol class="step-list">
+        <li class="step-item">
+          <span class="step-number">1</span>
+          <div class="step-text">
+            <h3>ご相談・予約</h3>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-number">2</span>
+          <div class="step-text">
+            <h3>スマホと現在の状態を確認</h3>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-number">3</span>
+          <div class="step-text">
+            <h3>必要な設定内容を確認</h3>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-number">4</span>
+          <div class="step-text">
+            <h3>設定・データ移行を実施</h3>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-number">5</span>
+          <div class="step-text">
+            <h3>一緒に動作確認</h3>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ⑨ こんな方におすすめ -->
+  <section class="st-recommend-section" aria-label="こんな方におすすめ">
+    <div class="container">
+      <h2 class="section-title">こんな方におすすめ</h2>
+
+      <ul class="st-recommend-grid">
+        <li class="st-recommend-item">
+          <svg class="check" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>新しいスマホをすぐ使える状態にしたい</span>
+        </li>
+        <li class="st-recommend-item">
+          <svg class="check" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>家族に頼らず自分で相談したい</span>
+        </li>
+        <li class="st-recommend-item">
+          <svg class="check" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>アプリやデータ移行までまとめて任せたい</span>
+        </li>
+        <li class="st-recommend-item">
+          <svg class="check" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>eSIMなど専門的な設定も安心して任せたい</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ⑩ ご確認ください -->
+  <section class="st-notes-section" aria-label="ご確認ください">
+    <div class="container">
+      <h2 class="section-title">ご確認ください</h2>
+
+      <ul class="st-notes-list">
+        <li>端末・OS・アプリ・契約状況により、対応方法が異なる場合があります</li>
+        <li>アカウント情報やパスワード等が必要になる場合があります</li>
+        <li>データ移行は、端末やサービスの状態によって移行できないデータがある場合があります</li>
+        <li>初期化を伴う作業は、内容確認後に進めます</li>
+        <li>詳細は作業前にご説明します</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ⑪ 最終CTA -->
+  <section class="st-cta-section" aria-label="最後のCTA">
+    <div class="container">
+      <h2 class="section-title">何を設定したらいいか<br class="card-break">分からなくても大丈夫。</h2>
+      <p class="st-cta-desc">今のスマホの状態を確認しながら、必要な設定を一緒に整理します。</p>
+
+      <div class="hero-ctas st-cta">
+        <a class="btn-cta is-line" href="https://line.me/" target="_blank" rel="noopener">
+          <svg class="cta-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3C6.48 3 2 6.69 2 11.2c0 4 3.53 7.36 8.31 8.02.32.07.76.21.87.49.1.25.06.65.03.9l-.14.9c-.04.25-.2.98.86.53s5.69-3.35 7.76-5.74C21.02 14.5 22 12.95 22 11.2 22 6.69 17.52 3 12 3Z" fill="currentColor"/></svg>
+          LINEで事前相談
+        </a>
+        <a class="btn-cta is-tel" href="tel:0000000000">
+          <svg class="cta-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1.1.5 1.1 1.1V20c0 .6-.5 1.1-1.1 1.1C10.6 21.1 2.9 13.4 2.9 3.9 2.9 3.3 3.4 2.8 4 2.8h3.3c.6 0 1.1.5 1.1 1.1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1L6.6 10.8Z" fill="currentColor"/></svg>
+          電話で予約
+        </a>
+      </div>
+
+      <p class="st-cta-hours">電話受付時間：10:00〜20:00</p>
+      <p class="st-cta-note">※対応中や都合により、すぐにお電話に出られない場合があります。その際は、確認でき次第折り返しご連絡いたします。</p>
+    </div>
+  </section>
+</main>
+
+<footer class="detail-footer">
+  <div class="container detail-footer-inner">
+    <a class="detail-footer-logo" href="index.html">
+      <img src="assets/logo.png" alt="スマホレスキューかごしま">
+    </a>
+    <a class="detail-footer-back" href="index.html">← TOPへ戻る</a>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

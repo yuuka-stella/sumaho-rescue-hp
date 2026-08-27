@@ -1,0 +1,886 @@
+/* ===== 設定・データ移行 詳細ページ ===== */
+
+/* ---------- Hero ---------- */
+.st-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 22px 0 32px;
+}
+
+.st-hero-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "title figure"
+    "subhead subhead"
+    "desc desc"
+    "ctas ctas";
+  column-gap: 14px;
+  row-gap: 12px;
+  align-items: start;
+  text-align: left;
+}
+
+.st-title {
+  grid-area: title;
+  margin: 0;
+  font-size: 19px;
+  font-weight: 900;
+  line-height: 1.5;
+  color: var(--navy);
+}
+
+.st-figure {
+  grid-area: figure;
+  align-self: center;
+  width: 64px;
+  margin: 0;
+}
+
+.st-figure img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 10px 16px rgba(226, 52, 43, 0.18));
+}
+
+.st-subhead {
+  grid-area: subhead;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.6;
+  color: var(--navy);
+}
+
+.st-desc {
+  grid-area: desc;
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.75;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+
+.st-hero-ctas {
+  grid-area: ctas;
+}
+
+/* ---------- ② 料金の目安 ---------- */
+.st-teaser-section {
+  background: linear-gradient(135deg, var(--navy) 0%, #24365c 100%);
+  padding: 18px 0 22px;
+}
+
+.st-teaser-inner {
+  text-align: center;
+}
+
+.st-teaser-label {
+  margin: 0 0 12px;
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  color: var(--white);
+}
+
+.st-teaser-grid {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.st-teaser-card {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 14px;
+  padding: 12px 8px;
+}
+
+.st-teaser-name {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.st-teaser-price {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--white);
+}
+
+.st-teaser-price small {
+  font-size: 0.55em;
+  font-weight: 700;
+  margin-left: 1px;
+}
+
+.st-teaser-link {
+  display: inline-block;
+  margin-top: 2px;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--yellow-deep);
+}
+
+/* ---------- ③ こんなお悩みありませんか？ ---------- */
+.st-worries-section {
+  padding: 22px 0 24px;
+}
+
+.st-worry-grid {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.st-worry-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--white);
+  border: 1px solid rgba(27, 42, 74, 0.08);
+  border-radius: 14px;
+  padding: 12px 14px;
+  box-shadow: 0 6px 14px rgba(27, 42, 74, 0.06);
+}
+
+.st-worry-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: var(--red);
+}
+
+.st-worry-item span {
+  font-size: 12.5px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--navy);
+}
+
+/* ---------- ④ こんな設定に対応しています ---------- */
+.st-categories-section {
+  background: var(--cream-deep);
+  padding: 24px 0;
+}
+
+.st-category-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.st-category {
+  background: var(--white);
+  border: 1px solid rgba(27, 42, 74, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.st-category summary {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.st-category summary::-webkit-details-marker {
+  display: none;
+}
+
+.st-category-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--red-light);
+  color: var(--red);
+}
+
+.st-category-icon svg {
+  width: 55%;
+  height: 55%;
+}
+
+.st-category-text {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.st-category-name {
+  font-family: var(--font-heading);
+  font-size: 13.5px;
+  font-weight: 800;
+  color: var(--navy);
+}
+
+.st-category-desc {
+  font-size: 10.5px;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+
+.st-category-chevron {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  color: var(--red);
+  transition: transform 0.2s ease;
+}
+
+.st-category[open] .st-category-chevron,
+.st-price-group[open] .st-category-chevron {
+  transform: rotate(180deg);
+}
+
+.st-tag-list {
+  margin: 0;
+  padding: 0 16px 16px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.st-tag-list li {
+  padding: 5px 11px;
+  border-radius: var(--radius-pill);
+  background: var(--red-light);
+  color: var(--red-dark);
+  font-size: 11.5px;
+  font-weight: 700;
+}
+
+/* ---------- ⑤ 料金一覧 ---------- */
+.st-pricing-section {
+  padding: 24px 0 32px;
+}
+
+.st-pricing-lead {
+  margin: 0 0 10px;
+  text-align: center;
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+
+.st-price-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.st-price-group {
+  background: var(--white);
+  border: 1.5px solid var(--red-light);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.st-price-group summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 16px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.st-price-group summary::-webkit-details-marker {
+  display: none;
+}
+
+.st-price-group-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.st-price-group-name {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--navy);
+}
+
+.st-price-group-hint {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+
+.st-price-group-hint strong {
+  font-weight: 800;
+  color: var(--red-dark);
+}
+
+.st-price-rows {
+  margin: 0;
+  padding: 4px 16px 14px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.st-price-rows li {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 8px 0;
+  border-top: 1px dashed rgba(27, 42, 74, 0.12);
+}
+
+.st-price-rows li:first-child {
+  border-top: none;
+}
+
+.st-price-rows li span {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.st-price-rows li strong {
+  flex-shrink: 0;
+  font-family: var(--font-heading);
+  font-size: 13.5px;
+  font-weight: 900;
+  color: var(--red-dark);
+}
+
+/* ---------- ⑥ データ移行について ---------- */
+.st-migration-section {
+  padding: 36px 0 22px;
+  text-align: center;
+}
+
+.st-migration-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  background: var(--red-light);
+  color: var(--red);
+}
+
+.st-migration-icon svg {
+  width: 55%;
+  height: 55%;
+}
+
+.st-migration-desc {
+  margin: 0 auto 10px;
+  max-width: 32em;
+  font-size: 13px;
+  line-height: 1.75;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+
+.st-migration-note {
+  margin: 0 auto;
+  max-width: 32em;
+  font-size: 11px;
+  line-height: 1.7;
+  font-weight: 500;
+  color: var(--navy-soft);
+  opacity: 0.85;
+}
+
+/* ---------- ⑦ eSIM設定 ---------- */
+.st-esim-section {
+  padding: 8px 0 28px;
+}
+
+.st-esim-box {
+  position: relative;
+  background: linear-gradient(160deg, var(--yellow) 0%, var(--cream-deep) 100%);
+  border: 1.5px solid var(--yellow-deep);
+  border-radius: var(--radius-lg);
+  padding: 28px 20px 22px;
+  text-align: center;
+}
+
+.st-esim-badge {
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--red);
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 16px;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 4px 10px rgba(226, 52, 43, 0.3);
+  white-space: nowrap;
+}
+
+.st-esim-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  margin: 4px auto 10px;
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--red);
+  box-shadow: 0 6px 14px rgba(27, 42, 74, 0.1);
+}
+
+.st-esim-icon svg {
+  width: 55%;
+  height: 55%;
+}
+
+.st-esim-title {
+  margin: 0 0 8px;
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 900;
+  color: var(--navy);
+}
+
+.st-esim-desc {
+  margin: 0 0 10px;
+  font-size: 12px;
+  line-height: 1.65;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+
+.st-esim-price {
+  margin: 0 0 8px;
+  font-family: var(--font-heading);
+  font-size: 26px;
+  font-weight: 900;
+  color: var(--red-dark);
+}
+
+.st-esim-note {
+  margin: 0;
+  font-size: 10px;
+  line-height: 1.6;
+  font-weight: 500;
+  color: var(--navy-soft);
+  opacity: 0.85;
+}
+
+/* ---------- ⑧ サポートの流れ ---------- */
+.st-flow-section {
+  background: var(--cream-deep);
+  padding: 24px 0;
+}
+
+.step-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.step-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--white);
+  border: 1.5px solid var(--red-light);
+  border-radius: 14px;
+  padding: 10px 14px;
+  box-shadow: var(--shadow-soft);
+}
+
+.step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--red);
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 900;
+  box-shadow: 0 6px 12px rgba(226, 52, 43, 0.25);
+}
+
+.step-text h3 {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1.4;
+}
+
+/* ---------- ⑨ こんな方におすすめ ---------- */
+.st-recommend-section {
+  padding: 24px 0;
+}
+
+.st-recommend-grid {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.st-recommend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--red-light);
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+
+.st-recommend-item .check {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  color: var(--red-dark);
+}
+
+.st-recommend-item span {
+  font-size: 12.5px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--navy);
+}
+
+/* ---------- ⑩ ご確認ください ---------- */
+.st-notes-section {
+  padding: 0 0 24px;
+}
+
+.st-notes-list {
+  margin: 0;
+  padding: 14px 16px;
+  list-style: none;
+  background: var(--cream-deep);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.st-notes-list li {
+  position: relative;
+  padding-left: 16px;
+  font-size: 12.5px;
+  line-height: 1.65;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+
+.st-notes-list li::before {
+  content: "・";
+  position: absolute;
+  left: 0;
+  color: var(--red);
+  font-weight: 900;
+}
+
+/* ---------- ⑪ 最終CTA ---------- */
+.st-cta-section {
+  padding: 0 0 32px;
+  text-align: center;
+}
+
+.st-cta-desc {
+  margin: 0 0 16px;
+  font-size: 12.5px;
+  line-height: 1.7;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+
+.st-cta {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.st-cta-hours {
+  margin: 12px 0 0;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.st-cta-note {
+  margin: 4px 0 0;
+  font-size: 10.5px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: var(--navy-soft);
+  opacity: 0.85;
+}
+
+/* ---------- Responsive ---------- */
+@media (min-width: 720px) {
+  .st-title {
+    font-size: 26px;
+  }
+
+  .st-subhead {
+    font-size: 16px;
+  }
+
+  .st-desc {
+    font-size: 14px;
+  }
+
+  .st-figure {
+    width: 96px;
+  }
+
+  .st-hero-ctas {
+    flex-direction: row;
+  }
+
+  .st-worry-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .st-worry-item span {
+    font-size: 13.5px;
+  }
+
+  .st-teaser-grid {
+    max-width: 480px;
+    margin: 0 auto 10px;
+  }
+
+  .st-recommend-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .st-recommend-item span {
+    font-size: 13.5px;
+  }
+
+  .st-category-name {
+    font-size: 15px;
+  }
+
+  .st-tag-list li {
+    font-size: 12.5px;
+  }
+
+  .st-price-group-name {
+    font-size: 15px;
+  }
+
+  .st-price-group-hint {
+    font-size: 12px;
+  }
+
+  .st-price-rows li span {
+    font-size: 13px;
+  }
+
+  .st-migration-desc {
+    font-size: 15px;
+  }
+
+  .st-migration-note {
+    font-size: 12px;
+  }
+
+  .st-esim-box {
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  .st-esim-desc {
+    font-size: 13px;
+  }
+
+  .step-list {
+    flex-direction: row;
+  }
+
+  .step-item {
+    flex: 1 1 0;
+    flex-direction: column;
+    text-align: center;
+    padding: 16px 12px;
+  }
+
+  .st-notes-list {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .st-cta-desc {
+    font-size: 14px;
+  }
+
+  .st-cta {
+    flex-direction: row;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 960px) {
+  .st-hero {
+    padding: 48px 0 56px;
+  }
+
+  .st-hero-inner {
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    grid-template-areas:
+      "title figure"
+      "subhead figure"
+      "desc figure"
+      "ctas figure";
+    column-gap: 48px;
+    row-gap: 16px;
+  }
+
+  .st-title {
+    font-size: 34px;
+  }
+
+  .st-desc {
+    max-width: 34em;
+  }
+
+  .st-figure {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  .st-hero-ctas {
+    max-width: 460px;
+  }
+
+  .st-teaser-section {
+    padding: 28px 0 32px;
+  }
+
+  .st-worries-section {
+    padding: 36px 0 40px;
+  }
+
+  .st-worry-grid {
+    max-width: 800px;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .st-categories-section {
+    padding: 40px 0;
+  }
+
+  .st-category-list {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .st-pricing-section {
+    padding: 40px 0;
+  }
+
+  .st-price-list {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .st-migration-section {
+    padding: 40px 0;
+  }
+
+  .st-esim-section {
+    padding: 16px 0 48px;
+  }
+
+  .st-flow-section {
+    padding: 40px 0;
+  }
+
+  .step-list {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .st-recommend-section {
+    padding: 40px 0;
+  }
+
+  .st-recommend-grid {
+    max-width: 800px;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .st-notes-section {
+    padding: 0 0 40px;
+  }
+
+  .st-cta-section {
+    padding: 0 0 64px;
+  }
+}
+
+/* ---------- Footer ---------- */
+.detail-footer {
+  background: var(--cream-deep);
+  border-top: 1px solid rgba(27, 42, 74, 0.08);
+  padding: 18px 0;
+}
+
+.detail-footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.detail-footer-logo img {
+  height: 30px;
+  width: auto;
+}
+
+.detail-footer-back {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--red-dark);
+}
