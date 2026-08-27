@@ -1,0 +1,692 @@
+/* ===== スマホの資格取得 詳細ページ ===== */
+
+/* ---------- Hero ---------- */
+.lic-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 22px 0 32px;
+}
+
+.lic-hero-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "title figure"
+    "subhead subhead"
+    "desc desc"
+    "ctas ctas";
+  column-gap: 14px;
+  row-gap: 12px;
+  align-items: start;
+  text-align: left;
+}
+
+.lic-title {
+  grid-area: title;
+  margin: 0;
+  font-size: 18.5px;
+  font-weight: 900;
+  line-height: 1.5;
+  color: var(--navy);
+}
+
+.lic-title .accent {
+  color: var(--red);
+}
+
+.lic-figure {
+  grid-area: figure;
+  align-self: center;
+  width: 64px;
+  margin: 0;
+}
+
+.lic-figure img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 10px 16px rgba(226, 52, 43, 0.18));
+}
+
+.lic-subhead {
+  grid-area: subhead;
+  margin: 0;
+  font-size: 13.5px;
+  font-weight: 800;
+  line-height: 1.65;
+  color: var(--navy);
+}
+
+.lic-desc {
+  grid-area: desc;
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.7;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+
+.lic-hero-ctas {
+  grid-area: ctas;
+}
+
+/* ---------- ② 現在受講できる4資格 ---------- */
+.lic-certs-section {
+  padding: 6px 0 20px;
+}
+
+.lic-cert-list {
+  margin: 0 0 10px;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.lic-cert-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border: 1.5px solid var(--red-light);
+  border-radius: 16px;
+  padding: 12px 10px 10px;
+  box-shadow: var(--shadow-soft);
+}
+
+.lic-cert-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--red-light);
+  color: var(--red);
+  margin-bottom: 6px;
+}
+
+.lic-cert-icon svg {
+  width: 55%;
+  height: 55%;
+}
+
+.lic-cert-card h3 {
+  margin: 0 0 5px;
+  min-height: 2.7em;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1.35;
+  color: var(--navy);
+}
+
+.lic-mark {
+  font-size: 0.62em;
+  font-weight: 700;
+  color: var(--red-dark);
+  vertical-align: super;
+  margin-left: 1px;
+}
+
+.lic-cert-card > p {
+  margin: 0 0 8px;
+  min-height: 2.6em;
+  font-size: 10.5px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+
+.lic-cert-detail {
+  margin: 0;
+  padding: 8px 0 0;
+  border-top: 1px dashed rgba(27, 42, 74, 0.15);
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.lic-cert-detail li {
+  position: relative;
+  padding-left: 12px;
+  font-size: 10.5px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+
+.lic-cert-detail li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--red);
+}
+
+.lic-cert-note {
+  margin: auto 0 0;
+  padding-top: 8px;
+  border-top: 1px dashed rgba(27, 42, 74, 0.15);
+  font-size: 9.5px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: var(--navy-soft);
+  opacity: 0.9;
+}
+
+.lic-cert-note.is-strong {
+  color: var(--red-dark);
+  font-weight: 800;
+  opacity: 1;
+}
+
+.lic-cert-footnote {
+  margin: 0;
+  text-align: center;
+  font-size: 10.5px;
+  line-height: 1.6;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+
+/* ---------- ③ 資格取得のメリット ---------- */
+.lic-benefits-section {
+  padding: 0 0 24px;
+}
+
+.lic-benefit-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.lic-benefit-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: var(--white);
+  border: 1px solid rgba(27, 42, 74, 0.08);
+  border-radius: 14px;
+  padding: 12px 14px;
+  box-shadow: 0 6px 14px rgba(27, 42, 74, 0.06);
+}
+
+.lic-benefit-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--red);
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.lic-benefit-card p {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.6;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+/* ---------- ④ こんな方におすすめ ---------- */
+.lic-recommend-section {
+  padding: 0 0 24px;
+}
+
+.lic-worry-grid {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.lic-worry-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--white);
+  border: 1px solid rgba(27, 42, 74, 0.08);
+  border-radius: 14px;
+  padding: 12px 14px;
+  box-shadow: 0 6px 14px rgba(27, 42, 74, 0.06);
+}
+
+.lic-worry-item .check {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  color: var(--red);
+}
+
+.lic-worry-item span {
+  font-size: 12.5px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--navy);
+}
+
+/* ---------- ⑤ 資格取得後に活かせること ---------- */
+.lic-uses-section {
+  padding: 0 0 20px;
+}
+
+.lic-uses-list {
+  margin: 0 0 10px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.lic-uses-list li {
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+  background: var(--red-light);
+  color: var(--red-dark);
+  font-size: 12.5px;
+  font-weight: 700;
+}
+
+.lic-uses-note {
+  margin: 0;
+  text-align: center;
+  font-size: 11px;
+  line-height: 1.6;
+  font-weight: 500;
+  color: var(--navy-soft);
+  opacity: 0.85;
+}
+
+/* ---------- ⑥ 資格取得までの流れ ---------- */
+.lic-flow-section {
+  padding: 0 0 24px;
+}
+
+.step-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.step-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--white);
+  border: 1.5px solid var(--red-light);
+  border-radius: 14px;
+  padding: 10px 14px;
+  box-shadow: var(--shadow-soft);
+}
+
+.step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--red);
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 900;
+  box-shadow: 0 6px 12px rgba(226, 52, 43, 0.25);
+}
+
+.step-text h3 {
+  margin: 0;
+  font-size: 13.5px;
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1.4;
+}
+
+/* ---------- ⑦ 今後も資格を追加予定 ---------- */
+.lic-future-section {
+  padding: 0 0 20px;
+}
+
+.lic-future-box {
+  background: var(--yellow);
+  border-radius: var(--radius-lg);
+  padding: 16px 18px;
+  text-align: center;
+}
+
+.lic-future-main {
+  margin: 0 0 8px;
+  font-size: 14.5px;
+  font-weight: 900;
+  line-height: 1.5;
+  color: var(--navy);
+}
+
+.lic-future-sub {
+  margin: 0;
+  font-size: 11.5px;
+  line-height: 1.6;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+
+/* ---------- ⑧ ご確認ください ---------- */
+.lic-notes-section {
+  padding: 0 0 24px;
+}
+
+.lic-notes-list {
+  margin: 0;
+  padding: 14px 16px;
+  list-style: none;
+  background: var(--cream-deep);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.lic-notes-list li {
+  position: relative;
+  padding-left: 16px;
+  font-size: 12.5px;
+  line-height: 1.65;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+
+.lic-notes-list li::before {
+  content: "・";
+  position: absolute;
+  left: 0;
+  color: var(--red);
+  font-weight: 900;
+}
+
+/* ---------- ⑨ 最終CTA ---------- */
+.lic-cta-section {
+  padding: 0 0 32px;
+  text-align: center;
+}
+
+.lic-cta-desc {
+  margin: 0 0 16px;
+  font-size: 12.5px;
+  line-height: 1.7;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+
+.lic-cta {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.lic-cta-hours {
+  margin: 12px 0 0;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.lic-cta-note {
+  margin: 4px 0 0;
+  font-size: 10.5px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: var(--navy-soft);
+  opacity: 0.85;
+}
+
+/* ---------- Responsive ---------- */
+@media (min-width: 720px) {
+  .lic-title {
+    font-size: 25px;
+  }
+
+  .lic-subhead {
+    font-size: 15.5px;
+  }
+
+  .lic-desc {
+    font-size: 13.5px;
+  }
+
+  .lic-figure {
+    width: 96px;
+  }
+
+  .lic-hero-ctas {
+    flex-direction: row;
+  }
+
+  .lic-cert-list {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+
+  .lic-cert-card {
+    padding: 16px 14px 14px;
+  }
+
+  .lic-cert-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .lic-cert-card h3 {
+    font-size: 13.5px;
+  }
+
+  .lic-cert-card > p {
+    font-size: 11.5px;
+  }
+
+  .lic-cert-detail li {
+    font-size: 11.5px;
+  }
+
+  .lic-benefit-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .lic-benefit-card {
+    flex: 1 1 calc(50% - 4px);
+  }
+
+  .lic-worry-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .lic-worry-item span {
+    font-size: 13.5px;
+  }
+
+  .lic-uses-list li {
+    font-size: 13px;
+  }
+
+  .step-list {
+    flex-direction: row;
+  }
+
+  .step-item {
+    flex: 1 1 0;
+    flex-direction: column;
+    text-align: center;
+    padding: 16px 12px;
+  }
+
+  .lic-future-box {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 24px 32px;
+  }
+
+  .lic-future-main {
+    font-size: 17px;
+  }
+
+  .lic-future-sub {
+    font-size: 13px;
+  }
+
+  .lic-notes-list {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .lic-cta-desc {
+    font-size: 14px;
+  }
+
+  .lic-cta {
+    flex-direction: row;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 960px) {
+  .lic-hero {
+    padding: 48px 0 56px;
+  }
+
+  .lic-hero-inner {
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    grid-template-areas:
+      "title figure"
+      "subhead figure"
+      "desc figure"
+      "ctas figure";
+    column-gap: 48px;
+    row-gap: 16px;
+  }
+
+  .lic-title {
+    font-size: 32px;
+  }
+
+  .lic-desc {
+    max-width: 34em;
+  }
+
+  .lic-figure {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  .lic-hero-ctas {
+    max-width: 460px;
+  }
+
+  .lic-certs-section {
+    padding: 12px 0 40px;
+  }
+
+  .lic-cert-list {
+    max-width: 960px;
+    margin: 0 auto 10px;
+    gap: 18px;
+  }
+
+  .lic-benefits-section {
+    padding: 0 0 40px;
+  }
+
+  .lic-benefit-list {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .lic-recommend-section {
+    padding: 0 0 40px;
+  }
+
+  .lic-worry-grid {
+    max-width: 800px;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .lic-uses-section {
+    padding: 0 0 40px;
+  }
+
+  .lic-uses-list {
+    max-width: 700px;
+    margin: 0 auto 10px;
+  }
+
+  .lic-flow-section {
+    padding: 0 0 40px;
+  }
+
+  .step-list {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .lic-future-section {
+    padding: 0 0 40px;
+  }
+
+  .lic-notes-section {
+    padding: 0 0 40px;
+  }
+
+  .lic-cta-section {
+    padding: 0 0 64px;
+  }
+}
+
+/* ---------- Footer ---------- */
+.detail-footer {
+  background: var(--cream-deep);
+  border-top: 1px solid rgba(27, 42, 74, 0.08);
+  padding: 18px 0;
+}
+
+.detail-footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.detail-footer-logo img {
+  height: 30px;
+  width: auto;
+}
+
+.detail-footer-back {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--red-dark);
+}
