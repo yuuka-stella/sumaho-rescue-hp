@@ -1,0 +1,730 @@
+/* ===== スマホ教室 詳細ページ ===== */
+
+/* ---------- Hero ---------- */
+.cl-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 22px 0 32px;
+}
+
+.cl-hero-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "title figure"
+    "subhead subhead"
+    "desc desc"
+    "ctas ctas";
+  column-gap: 14px;
+  row-gap: 12px;
+  align-items: start;
+  text-align: left;
+}
+
+.cl-title {
+  grid-area: title;
+  margin: 0;
+  font-size: 18.5px;
+  font-weight: 900;
+  line-height: 1.5;
+  color: var(--navy);
+}
+
+.cl-title .accent {
+  color: var(--red);
+}
+
+.cl-figure {
+  grid-area: figure;
+  align-self: center;
+  width: 64px;
+  margin: 0;
+}
+
+.cl-figure img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 10px 16px rgba(226, 52, 43, 0.18));
+}
+
+.cl-subhead {
+  grid-area: subhead;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.6;
+  color: var(--navy);
+}
+
+.cl-desc {
+  grid-area: desc;
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.75;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+
+.cl-hero-ctas {
+  grid-area: ctas;
+}
+
+/* ---------- ② 2つの受講スタイル ---------- */
+.cl-styles-section {
+  padding: 6px 0 24px;
+}
+
+.cl-style-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cl-style-card {
+  background: var(--white);
+  border: 1.5px solid var(--red-light);
+  border-radius: var(--radius-lg);
+  padding: 18px 18px 20px;
+  box-shadow: var(--shadow-soft);
+}
+
+.cl-style-card h3 {
+  margin: 0 0 8px;
+  font-size: 16.5px;
+  font-weight: 900;
+  color: var(--navy);
+}
+
+.cl-style-price {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--red-dark);
+  margin-bottom: 10px;
+}
+
+.cl-style-note {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  background: var(--cream-deep);
+  color: var(--navy);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.cl-style-detail {
+  margin: 0;
+  padding: 12px 0 0;
+  border-top: 1px dashed rgba(27, 42, 74, 0.15);
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cl-style-detail li {
+  position: relative;
+  padding-left: 14px;
+  font-size: 12.5px;
+  line-height: 1.6;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+
+.cl-style-detail li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--red);
+}
+
+.cl-style-tagline {
+  margin: 12px 0 0;
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--red-dark);
+}
+
+/* ---------- ③ こんなことが学べます ---------- */
+.cl-categories-section {
+  padding: 0 0 24px;
+}
+
+.cl-category-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cl-category {
+  background: var(--white);
+  border: 1px solid rgba(27, 42, 74, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.cl-category summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 14px 16px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.cl-category summary::-webkit-details-marker {
+  display: none;
+}
+
+.cl-category-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--navy);
+}
+
+.cl-category-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--red);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.cl-category-chevron {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  color: var(--red);
+  transition: transform 0.2s ease;
+}
+
+.cl-category[open] .cl-category-chevron {
+  transform: rotate(180deg);
+}
+
+.cl-tag-list {
+  margin: 0;
+  padding: 0 16px 16px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.cl-tag-list li {
+  padding: 5px 11px;
+  border-radius: var(--radius-pill);
+  background: var(--red-light);
+  color: var(--red-dark);
+  font-size: 11.5px;
+  font-weight: 700;
+}
+
+/* ---------- ④ 人気・おすすめ講座 ---------- */
+.cl-popular-section {
+  padding: 0 0 24px;
+}
+
+.cl-popular-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cl-popular-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: var(--white);
+  border: 1px solid rgba(27, 42, 74, 0.08);
+  border-radius: 16px;
+  padding: 12px 14px;
+  box-shadow: 0 6px 14px rgba(27, 42, 74, 0.06);
+}
+
+.cl-popular-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--red-light);
+  color: var(--red);
+}
+
+.cl-popular-icon svg {
+  width: 55%;
+  height: 55%;
+}
+
+.cl-popular-text h3 {
+  margin: 0 0 3px;
+  font-size: 14px;
+  font-weight: 900;
+  color: var(--navy);
+}
+
+.cl-popular-text p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.55;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+
+/* ---------- ⑤ こんな方におすすめ ---------- */
+.cl-recommend-section {
+  padding: 0 0 24px;
+}
+
+.cl-worry-grid {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.cl-worry-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--white);
+  border: 1px solid rgba(27, 42, 74, 0.08);
+  border-radius: 14px;
+  padding: 12px 14px;
+  box-shadow: 0 6px 14px rgba(27, 42, 74, 0.06);
+}
+
+.cl-worry-item .check {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  color: var(--red);
+}
+
+.cl-worry-item span {
+  font-size: 12.5px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--navy);
+}
+
+/* ---------- ⑥ スマホ教室の様子 ---------- */
+.cl-gallery-section {
+  padding: 0 0 24px;
+}
+
+.cl-gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.cl-gallery-item {
+  margin: 0;
+}
+
+.cl-gallery-item img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: var(--shadow-soft);
+}
+
+.cl-gallery-item figcaption {
+  margin-top: 6px;
+  text-align: center;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--navy-soft);
+}
+
+/* ---------- ⑦ 受講の流れ ---------- */
+.cl-flow-section {
+  padding: 0 0 24px;
+}
+
+.step-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.step-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--white);
+  border: 1.5px solid var(--red-light);
+  border-radius: 14px;
+  padding: 10px 14px;
+  box-shadow: var(--shadow-soft);
+}
+
+.step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--red);
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 900;
+  box-shadow: 0 6px 12px rgba(226, 52, 43, 0.25);
+}
+
+.step-text h3 {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1.4;
+}
+
+/* ---------- ⑧ 料金 ---------- */
+.cl-pricing-section {
+  padding: 0 0 24px;
+}
+
+.cl-price-card {
+  background: var(--white);
+  border: 1.5px solid var(--red-light);
+  border-radius: var(--radius-lg);
+  padding: 20px 18px;
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+  margin-bottom: 10px;
+}
+
+.cl-price-card h3 {
+  margin: 0 0 8px;
+  font-size: 15px;
+  font-weight: 900;
+  color: var(--navy);
+}
+
+.cl-price-main {
+  font-family: var(--font-heading);
+  font-size: 26px;
+  font-weight: 900;
+  color: var(--red-dark);
+  margin-bottom: 8px;
+}
+
+.cl-price-note {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.6;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+
+.cl-price-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  gap: 6px 10px;
+  text-align: center;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: var(--cream-deep);
+}
+
+.cl-price-group strong {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 900;
+  color: var(--navy);
+}
+
+.cl-price-group span {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+
+/* ---------- ⑨ 最終CTA ---------- */
+.cl-cta-section {
+  padding: 0 0 32px;
+  text-align: center;
+}
+
+.cl-cta-desc {
+  margin: 0 0 16px;
+  font-size: 12.5px;
+  line-height: 1.7;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+
+.cl-cta {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.cl-cta-hours {
+  margin: 12px 0 0;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.cl-cta-note {
+  margin: 4px 0 0;
+  font-size: 10.5px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: var(--navy-soft);
+  opacity: 0.85;
+}
+
+/* ---------- Responsive ---------- */
+@media (min-width: 720px) {
+  .cl-title {
+    font-size: 25px;
+  }
+
+  .cl-subhead {
+    font-size: 16px;
+  }
+
+  .cl-desc {
+    font-size: 14px;
+  }
+
+  .cl-figure {
+    width: 96px;
+  }
+
+  .cl-hero-ctas {
+    flex-direction: row;
+  }
+
+  .cl-style-list {
+    flex-direction: row;
+  }
+
+  .cl-style-card {
+    flex: 1 1 0;
+  }
+
+  .cl-category-name {
+    font-size: 15px;
+  }
+
+  .cl-tag-list li {
+    font-size: 12.5px;
+  }
+
+  .cl-popular-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .cl-popular-card {
+    flex: 1 1 calc(50% - 8px);
+  }
+
+  .cl-worry-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .cl-worry-item span {
+    font-size: 13.5px;
+  }
+
+  .cl-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .step-list {
+    flex-direction: row;
+  }
+
+  .step-item {
+    flex: 1 1 0;
+    flex-direction: column;
+    text-align: center;
+    padding: 16px 12px;
+  }
+
+  .cl-price-card {
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cl-price-group {
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cl-cta-desc {
+    font-size: 14px;
+  }
+
+  .cl-cta {
+    flex-direction: row;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 960px) {
+  .cl-hero {
+    padding: 48px 0 56px;
+  }
+
+  .cl-hero-inner {
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    grid-template-areas:
+      "title figure"
+      "subhead figure"
+      "desc figure"
+      "ctas figure";
+    column-gap: 48px;
+    row-gap: 16px;
+  }
+
+  .cl-title {
+    font-size: 32px;
+  }
+
+  .cl-desc {
+    max-width: 34em;
+  }
+
+  .cl-figure {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  .cl-hero-ctas {
+    max-width: 460px;
+  }
+
+  .cl-styles-section {
+    padding: 12px 0 40px;
+  }
+
+  .cl-style-list {
+    max-width: 800px;
+    margin: 0 auto;
+    gap: 20px;
+  }
+
+  .cl-categories-section {
+    padding: 0 0 40px;
+  }
+
+  .cl-category-list {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .cl-popular-section {
+    padding: 0 0 40px;
+  }
+
+  .cl-popular-card {
+    flex: 1 1 calc(33.333% - 8px);
+  }
+
+  .cl-recommend-section {
+    padding: 0 0 40px;
+  }
+
+  .cl-worry-grid {
+    max-width: 800px;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .cl-gallery-section {
+    padding: 0 0 40px;
+  }
+
+  .cl-flow-section {
+    padding: 0 0 40px;
+  }
+
+  .step-list {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .cl-pricing-section {
+    padding: 0 0 40px;
+  }
+
+  .cl-cta-section {
+    padding: 0 0 64px;
+  }
+}
+
+/* ---------- Footer ---------- */
+.detail-footer {
+  background: var(--cream-deep);
+  border-top: 1px solid rgba(27, 42, 74, 0.08);
+  padding: 18px 0;
+}
+
+.detail-footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.detail-footer-logo img {
+  height: 30px;
+  width: auto;
+}
+
+.detail-footer-back {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--red-dark);
+}
