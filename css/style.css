@@ -194,14 +194,37 @@ button {
 }
 
 .mobile-menu.is-open {
-  max-height: 220px;
+  max-height: 80vh;
+  overflow-y: auto;
 }
 
 .mobile-menu-inner {
-  padding: 14px 20px 20px;
+  padding: 8px 20px 20px;
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.mobile-menu-nav {
+  list-style: none;
+  margin: 0 0 4px;
+  padding: 6px 0 12px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid rgba(27, 42, 74, 0.08);
+}
+
+.mobile-menu-nav a {
+  display: block;
+  padding: 10px 4px;
+  font-family: var(--font-heading);
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.mobile-menu-nav a:active {
+  opacity: 0.6;
 }
 
 .mobile-menu .btn-header {
@@ -553,6 +576,12 @@ button {
   background: var(--white);
   border-radius: var(--radius-lg);
   text-align: left;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.service-card:active {
+  transform: scale(0.98);
 }
 
 .service-card.is-main {
