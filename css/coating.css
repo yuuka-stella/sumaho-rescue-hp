@@ -1,0 +1,722 @@
+/* ===== スマホコーティング 詳細ページ ===== */
+
+/* ---------- Hero ---------- */
+.detail-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 22px 0 32px;
+}
+
+.detail-hero-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "title figure"
+    "subcopy subcopy"
+    "ctas ctas";
+  column-gap: 14px;
+  row-gap: 14px;
+  align-items: start;
+  text-align: left;
+}
+
+.detail-title {
+  grid-area: title;
+  margin: 0;
+  font-size: 19px;
+  font-weight: 900;
+  line-height: 1.45;
+  color: var(--navy);
+  letter-spacing: 0;
+}
+
+.detail-title .accent {
+  color: var(--red);
+}
+
+.detail-figure {
+  grid-area: figure;
+  align-self: center;
+  width: 64px;
+  margin: 0;
+}
+
+.detail-figure img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 10px 16px rgba(226, 52, 43, 0.18));
+}
+
+.detail-subcopy {
+  grid-area: subcopy;
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.75;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+
+.detail-hero .hero-ctas {
+  grid-area: ctas;
+}
+
+/* ---------- ② コーティングについて ---------- */
+.ct2-about-section {
+  padding: 6px 0 20px;
+  text-align: center;
+}
+
+.ct2-about-desc {
+  margin: 0 auto;
+  max-width: 34em;
+  font-size: 13px;
+  line-height: 1.8;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+
+/* ---------- ③ コーティングの主な効果 ---------- */
+.ct2-effects-section {
+  padding: 0 0 24px;
+}
+
+.ct2-effect-list {
+  margin: 0 0 8px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ct2-effect-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: var(--white);
+  border: 1.5px solid var(--red-light);
+  border-radius: 16px;
+  padding: 12px 14px;
+  box-shadow: var(--shadow-soft);
+}
+
+.ct2-effect-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--red);
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.ct2-effect-text h3 {
+  margin: 0 0 3px;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1.4;
+  color: var(--navy);
+}
+
+.ct2-effect-text p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.55;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+
+.ct2-effect-note {
+  margin: 0;
+  text-align: center;
+  font-size: 11px;
+  line-height: 1.6;
+  font-weight: 500;
+  color: var(--navy-soft);
+  opacity: 0.85;
+}
+
+/* ---------- ④ 取り扱いコーティングは2種類 ---------- */
+.ct2-types-section {
+  padding: 0 0 24px;
+}
+
+.ct2-type-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ct2-type-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border: 1.5px solid var(--red-light);
+  border-radius: var(--radius-lg);
+  padding: 18px 18px 20px;
+  box-shadow: var(--shadow-soft);
+}
+
+.ct2-type-card h3 {
+  margin: 0 0 8px;
+  min-height: 2.6em;
+  font-size: 16.5px;
+  font-weight: 900;
+  line-height: 1.3;
+  color: var(--navy);
+}
+
+.ct2-type-price {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--red-dark);
+}
+
+.ct2-type-time {
+  margin: 2px 0 12px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--navy-soft);
+}
+
+.ct2-type-detail {
+  margin: 0;
+  padding: 12px 0 0;
+  border-top: 1px dashed rgba(27, 42, 74, 0.15);
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ct2-type-detail li {
+  position: relative;
+  padding-left: 14px;
+  font-size: 12.5px;
+  line-height: 1.6;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+
+.ct2-type-detail li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--red);
+}
+
+/* ---------- ⑤ どちらを選べばいい？ ---------- */
+.ct2-choice-section {
+  padding: 0 0 24px;
+}
+
+.ct2-choice-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.ct2-choice-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+  background: var(--cream-deep);
+  border-radius: 16px;
+  padding: 16px 14px;
+}
+
+.ct2-choice-q {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--navy);
+}
+
+.ct2-choice-arrow {
+  margin: 2px 0;
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--red);
+}
+
+.ct2-choice-a {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 1.35;
+  color: var(--red-dark);
+}
+
+.ct2-choice-lead {
+  margin: 0;
+  text-align: center;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+/* ---------- ⑥ Before / After 施工例 ---------- */
+.ct2-gallery-section {
+  padding: 0 0 24px;
+}
+
+.ct2-gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.ct2-gallery-item {
+  position: relative;
+  margin: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  aspect-ratio: 4 / 5;
+}
+
+.ct2-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ct2-gallery-tag {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 1;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  background: rgba(27, 42, 74, 0.75);
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.ct2-gallery-tag.is-after {
+  background: var(--red);
+}
+
+.ct2-gallery-caption {
+  margin: 0 0 4px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.6;
+  color: var(--navy);
+}
+
+.ct2-gallery-note {
+  margin: 0 0 14px;
+  text-align: center;
+  font-size: 10.5px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: var(--navy-soft);
+  opacity: 0.85;
+}
+
+.ct2-gallery-supplement {
+  margin: 0;
+  padding: 12px 14px;
+  background: var(--cream-deep);
+  border-radius: 14px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.7;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+
+/* ---------- ⑦ こんな方におすすめ ---------- */
+.ct2-recommend-section {
+  padding: 0 0 24px;
+}
+
+.worry-check-grid {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.worry-check-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--white);
+  border: 1px solid rgba(27, 42, 74, 0.08);
+  border-radius: 14px;
+  padding: 12px 14px;
+  box-shadow: 0 6px 14px rgba(27, 42, 74, 0.06);
+}
+
+.worry-check-item .check {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--red);
+}
+
+.worry-check-item span {
+  font-size: 12.5px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--navy);
+}
+
+/* ---------- ⑧ 施工の流れ ---------- */
+.ct2-flow-section {
+  padding: 0 0 24px;
+}
+
+.step-list {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.step-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--white);
+  border: 1.5px solid var(--red-light);
+  border-radius: 14px;
+  padding: 10px 14px;
+  box-shadow: var(--shadow-soft);
+}
+
+.step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--red);
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 900;
+  box-shadow: 0 6px 12px rgba(226, 52, 43, 0.25);
+}
+
+.step-text h3 {
+  margin: 0;
+  font-size: 13.5px;
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1.3;
+}
+
+/* ---------- ⑨ 注意事項 ---------- */
+.ct2-notes-section {
+  padding: 0 0 24px;
+}
+
+.ct2-notes-list {
+  margin: 0;
+  padding: 14px 16px;
+  list-style: none;
+  background: var(--cream-deep);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ct2-notes-list li {
+  position: relative;
+  padding-left: 16px;
+  font-size: 12.5px;
+  line-height: 1.65;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+
+.ct2-notes-list li::before {
+  content: "・";
+  position: absolute;
+  left: 0;
+  color: var(--red);
+  font-weight: 900;
+}
+
+/* ---------- ⑩ 最終CTA ---------- */
+.ct2-cta-section {
+  padding: 0 0 32px;
+  text-align: center;
+}
+
+.ct2-cta-desc {
+  margin: 0 0 16px;
+  font-size: 12.5px;
+  line-height: 1.7;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+
+.ct2-cta {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.ct2-cta-hours {
+  margin: 12px 0 0;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.ct2-cta-note {
+  margin: 4px 0 0;
+  font-size: 10.5px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: var(--navy-soft);
+  opacity: 0.85;
+}
+
+/* ---------- Responsive ---------- */
+@media (min-width: 720px) {
+  .detail-title {
+    font-size: 25px;
+  }
+
+  .detail-subcopy {
+    font-size: 15px;
+  }
+
+  .detail-figure {
+    width: 96px;
+  }
+
+  .detail-hero .hero-ctas {
+    flex-direction: row;
+  }
+
+  .ct2-about-desc {
+    font-size: 15px;
+  }
+
+  .ct2-effect-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .ct2-effect-card {
+    flex: 1 1 calc(33.333% - 8px);
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .ct2-type-list {
+    flex-direction: row;
+  }
+
+  .ct2-type-card {
+    flex: 1 1 0;
+  }
+
+  .ct2-choice-list {
+    flex-direction: row;
+  }
+
+  .ct2-choice-card {
+    flex: 1 1 0;
+  }
+
+  .ct2-gallery-grid {
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .worry-check-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .worry-check-item span {
+    font-size: 13.5px;
+  }
+
+  .step-list {
+    flex-direction: row;
+  }
+
+  .step-item {
+    flex: 1 1 0;
+    flex-direction: column;
+    text-align: center;
+    padding: 16px 12px;
+  }
+
+  .ct2-cta-desc {
+    font-size: 14px;
+  }
+
+  .ct2-cta {
+    flex-direction: row;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 960px) {
+  .detail-hero {
+    padding: 48px 0 56px;
+  }
+
+  .detail-hero-inner {
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    grid-template-areas:
+      "title figure"
+      "subcopy figure"
+      "ctas figure";
+    column-gap: 48px;
+    row-gap: 18px;
+  }
+
+  .detail-title {
+    font-size: 34px;
+  }
+
+  .detail-subcopy {
+    font-size: 16px;
+    max-width: 34em;
+  }
+
+  .detail-figure {
+    width: 100%;
+    max-width: 220px;
+    margin: 0 auto;
+  }
+
+  .detail-hero .hero-ctas {
+    max-width: 480px;
+  }
+
+  .ct2-about-section {
+    padding: 12px 0 32px;
+  }
+
+  .ct2-effects-section {
+    padding: 0 0 40px;
+  }
+
+  .ct2-effect-card {
+    flex: 1 1 calc(20% - 10px);
+    padding: 20px 14px;
+  }
+
+  .ct2-types-section {
+    padding: 0 0 40px;
+  }
+
+  .ct2-type-list {
+    max-width: 800px;
+    margin: 0 auto;
+    gap: 20px;
+  }
+
+  .ct2-choice-section {
+    padding: 0 0 40px;
+  }
+
+  .ct2-choice-list {
+    max-width: 800px;
+    margin: 0 auto 16px;
+    gap: 20px;
+  }
+
+  .ct2-gallery-section {
+    padding: 0 0 40px;
+  }
+
+  .ct2-recommend-section {
+    padding: 0 0 40px;
+  }
+
+  .worry-check-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+  }
+
+  .ct2-flow-section {
+    padding: 0 0 40px;
+  }
+
+  .step-list {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .ct2-notes-section {
+    padding: 0 0 40px;
+  }
+
+  .ct2-notes-list {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .ct2-cta-section {
+    padding: 0 0 64px;
+  }
+}
+
+/* ---------- Footer ---------- */
+.detail-footer {
+  background: var(--cream-deep);
+  border-top: 1px solid rgba(27, 42, 74, 0.08);
+  padding: 18px 0;
+}
+
+.detail-footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.detail-footer-logo img {
+  height: 30px;
+  width: auto;
+}
+
+.detail-footer-back {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--red-dark);
+}
