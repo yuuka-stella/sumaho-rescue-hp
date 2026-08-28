@@ -404,17 +404,18 @@ button {
 }
 
 .hero-side {
-  grid-area: side;
+  grid-column: 2;
+  grid-row: 2 / span 2;
   width: 124px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 8px;
+  align-items: flex-end;
+  gap: 6px;
 }
 
 .hero-figure {
-  align-self: center;
-  width: 88px;
+  align-self: flex-end;
+  width: 74px;
   margin: 0;
 }
 
@@ -1034,12 +1035,14 @@ button {
 
   .hero-side {
     align-self: center;
+    align-items: center;
     width: 100%;
     max-width: 220px;
     margin: 0 auto;
   }
 
   .hero-figure {
+    align-self: center;
     width: 200px;
   }
 
