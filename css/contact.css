@@ -391,43 +391,6 @@
   border: 0;
 }
 
-.map-placeholder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  aspect-ratio: 16 / 10;
-  border-radius: var(--radius-lg);
-  background: var(--cream-deep);
-  border: 1.5px dashed rgba(27, 42, 74, 0.22);
-  color: var(--navy-soft);
-  padding: 16px;
-  text-align: center;
-}
-
-.map-placeholder svg {
-  width: 30px;
-  height: 30px;
-  color: var(--red);
-  opacity: 0.7;
-}
-
-.map-placeholder p {
-  margin: 4px 0 0;
-  font-family: var(--font-heading);
-  font-size: 13px;
-  font-weight: 800;
-  color: var(--navy);
-}
-
-.map-placeholder span {
-  font-size: 10.5px;
-  line-height: 1.6;
-  font-weight: 500;
-  max-width: 26em;
-}
-
 /* ---------- Googleの口コミ ---------- */
 .ct-reviews-section {
   padding: 0 0 24px;
@@ -523,7 +486,6 @@
   }
 
   .map-embed-wrap,
-  .map-placeholder,
   .map-embed {
     max-width: 640px;
     margin-left: auto;
