@@ -145,6 +145,16 @@ button {
   background: var(--red-dark);
 }
 
+.btn-header.is-web {
+  background: var(--white);
+  border: 1.5px solid var(--navy);
+  color: var(--navy);
+}
+
+.btn-header.is-web:hover {
+  background: rgba(27, 42, 74, 0.06);
+}
+
 .btn-header-icon {
   width: 16px;
   height: 16px;
@@ -415,7 +425,7 @@ button {
 
 .hero-figure {
   align-self: flex-end;
-  width: 74px;
+  width: 82px;
   margin: 0;
 }
 
@@ -515,10 +525,24 @@ button {
   filter: brightness(1.05);
 }
 
+.btn-cta.is-web {
+  background: var(--white);
+  border: 1.5px solid var(--navy);
+  color: var(--navy);
+  box-shadow: none;
+}
+
 .btn-cta .cta-icon {
   width: 24px;
   height: 24px;
   flex-shrink: 0;
+}
+
+.cta-external-icon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  opacity: 0.6;
 }
 
 .cta-sub {
