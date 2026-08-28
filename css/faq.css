@@ -79,56 +79,10 @@
 }
 
 .insta-desc {
-  margin: 8px 0 16px;
+  margin: 8px 0 20px;
   font-size: 12.5px;
   line-height: 1.6;
   font-weight: 500;
-  color: var(--navy-soft);
-}
-
-.insta-grid {
-  display: flex;
-  gap: 10px;
-  overflow-x: auto;
-  padding: 2px 2px 6px;
-  margin: 0 0 14px;
-  scroll-snap-type: x proximity;
-}
-
-.insta-card {
-  flex: 0 0 auto;
-  width: 132px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  background: var(--white);
-  border: 1px solid rgba(27, 42, 74, 0.08);
-  border-radius: 16px;
-  padding: 10px;
-  box-shadow: 0 6px 14px rgba(27, 42, 74, 0.06);
-  scroll-snap-align: start;
-}
-
-.insta-thumb {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  border-radius: 12px;
-  background: var(--red-light);
-  color: var(--red);
-}
-
-.insta-thumb svg {
-  width: 34%;
-  height: 34%;
-}
-
-.insta-label {
-  font-size: 11.5px;
-  font-weight: 700;
   color: var(--navy-soft);
 }
 
@@ -296,15 +250,6 @@
     font-size: 14px;
   }
 
-  .insta-grid {
-    overflow: visible;
-    justify-content: center;
-  }
-
-  .insta-card {
-    width: 200px;
-  }
-
   .final-cta-desc {
     font-size: 14px;
   }
@@ -338,17 +283,6 @@
 
   .insta-section {
     padding: 12px 0 32px;
-  }
-
-  .insta-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 720px;
-    margin: 0 auto 20px;
-  }
-
-  .insta-card {
-    width: auto;
   }
 
   .final-cta-section {
