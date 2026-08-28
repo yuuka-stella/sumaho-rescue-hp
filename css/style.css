@@ -227,6 +227,19 @@ button {
   opacity: 0.6;
 }
 
+.mobile-menu-nav a.has-icon {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-map-icon {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  color: var(--red);
+}
+
 .mobile-menu .btn-header {
   justify-content: center;
   font-size: 15px;
@@ -272,14 +285,15 @@ button {
   grid-template-columns: 1fr auto;
   grid-template-areas:
     "alert alert"
-    "title figure"
-    "subcopy subcopy"
-    "desc desc"
+    "title side"
+    "subcopy side"
+    "desc side"
     "ctas ctas"
+    "phone phone"
     "trust trust"
     "worries worries"
     "closing closing";
-  column-gap: 14px;
+  column-gap: 12px;
   row-gap: 10px;
   align-items: start;
   text-align: left;
@@ -369,16 +383,25 @@ button {
 .hero-desc {
   grid-area: desc;
   margin: 0;
-  font-size: 12px;
+  font-size: 11px;
+  letter-spacing: -0.02em;
   line-height: 1.65;
   color: var(--navy-soft);
   max-width: 30em;
 }
 
+.hero-side {
+  grid-area: side;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
 .hero-figure {
-  grid-area: figure;
   align-self: center;
-  width: 124px;
+  width: 88px;
   margin: 0;
 }
 
@@ -489,6 +512,171 @@ button {
   font-size: 11.5px;
   font-weight: 600;
   opacity: 0.9;
+}
+
+/* ---------- 営業時間 / 電話予約カード ---------- */
+.hero-hours {
+  width: 100%;
+}
+
+.hero-hours-title {
+  margin: 0 0 4px;
+  font-family: var(--font-heading);
+  font-size: 10.5px;
+  font-weight: 900;
+  color: var(--navy);
+  text-align: center;
+}
+
+.hours-card {
+  background: var(--white);
+  border: 1.5px solid var(--red-light);
+  border-radius: var(--radius-lg);
+  padding: 2px 14px;
+  box-shadow: var(--shadow-soft);
+}
+
+.hours-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 0;
+  border-top: 1px dashed rgba(27, 42, 74, 0.12);
+}
+
+.hours-row:first-child {
+  border-top: none;
+}
+
+.hours-day {
+  font-family: var(--font-heading);
+  font-size: 12.5px;
+  font-weight: 800;
+  color: var(--navy);
+}
+
+.hours-time {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--navy-soft);
+}
+
+.hours-row.is-closed .hours-day {
+  color: var(--red-dark);
+}
+
+.hours-row.is-closed .hours-time {
+  padding: 2px 10px;
+  border-radius: var(--radius-pill);
+  background: var(--red-light);
+  color: var(--red-dark);
+  font-weight: 800;
+}
+
+.hours-card.is-mini {
+  padding: 2px 8px;
+}
+
+.hours-card.is-mini .hours-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  padding: 4px 0;
+}
+
+.hours-card.is-mini .hours-day,
+.hours-card.is-mini .hours-time {
+  font-size: 9px;
+  line-height: 1.35;
+}
+
+.hours-card.is-mini .hours-day {
+  font-weight: 800;
+}
+
+.hours-card.is-mini .hours-row.is-closed .hours-time {
+  padding: 0;
+  background: none;
+  border-radius: 0;
+}
+
+.hero-phone {
+  grid-area: phone;
+  width: 100%;
+}
+
+.phone-card {
+  background: var(--red-light);
+  border: 1.5px solid rgba(226, 52, 43, 0.25);
+  border-radius: var(--radius-lg);
+  padding: 12px 14px;
+}
+
+.phone-card-main {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.phone-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--red);
+  color: var(--white);
+  box-shadow: 0 8px 16px rgba(226, 52, 43, 0.25);
+}
+
+.phone-icon svg {
+  width: 52%;
+  height: 52%;
+}
+
+.phone-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.phone-text strong {
+  font-family: var(--font-heading);
+  font-size: 13.5px;
+  font-weight: 900;
+  color: var(--navy);
+}
+
+.phone-time {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 900;
+  color: var(--red-dark);
+}
+
+.phone-time em {
+  font-style: normal;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.phone-note {
+  margin: 10px 0 0;
+  padding-top: 10px;
+  border-top: 1px dashed rgba(226, 52, 43, 0.2);
+  font-size: 10px;
+  line-height: 1.6;
+  font-weight: 500;
+  color: var(--navy-soft);
 }
 
 .trust-list {
@@ -719,6 +907,7 @@ button {
 
   .hero-desc {
     font-size: 15px;
+    letter-spacing: normal;
   }
 
   .worry-card span:last-child {
@@ -727,6 +916,18 @@ button {
 
   .hero-ctas {
     flex-direction: row;
+  }
+
+  .phone-text strong {
+    font-size: 15px;
+  }
+
+  .phone-time {
+    font-size: 17px;
+  }
+
+  .phone-note {
+    font-size: 11px;
   }
 
   .trust-list {
@@ -790,11 +991,12 @@ button {
     grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
     grid-template-areas:
       "alert alert"
-      "title figure"
-      "subcopy figure"
-      "desc figure"
+      "title side"
+      "subcopy side"
+      "desc side"
       "worries worries"
       "ctas ctas"
+      "phone phone"
       "trust trust"
       "closing closing";
     column-gap: 48px;
@@ -810,9 +1012,24 @@ button {
     grid-area: title;
   }
 
-  .hero-figure {
-    grid-area: figure;
+  .hero-side {
     align-self: center;
+    width: 100%;
+    max-width: 220px;
+    margin: 0 auto;
+  }
+
+  .hero-figure {
+    width: 200px;
+  }
+
+  .hero-hours-title {
+    font-size: 12px;
+  }
+
+  .hours-card.is-mini .hours-day,
+  .hours-card.is-mini .hours-time {
+    font-size: 11px;
   }
 
   .hero-subcopy {
