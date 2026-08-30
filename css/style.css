@@ -966,6 +966,73 @@ button {
   line-height: 1.3;
 }
 
+/* ---------- お客様の声（TOP） ---------- */
+.top-reviews-section {
+  padding: 8px 0 36px;
+}
+
+.top-reviews-desc {
+  margin: 0 0 14px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+
+.top-review-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 0 0 18px;
+}
+
+.top-review-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background: var(--white);
+  border: 1px solid rgba(27, 42, 74, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 18px 16px;
+  box-shadow: 0 6px 14px rgba(27, 42, 74, 0.06);
+  text-align: center;
+}
+
+.top-review-stars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+.top-review-stars svg {
+  width: 13px;
+  height: 13px;
+  color: var(--yellow-deep);
+}
+
+.top-review-quote {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.7;
+  font-weight: 500;
+  color: var(--navy);
+}
+
+.top-review-name {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--navy-soft);
+}
+
+.top-reviews-more {
+  display: flex;
+  width: max-content;
+  margin: 0 auto;
+}
+
 /* ---------- Responsive: tablet / desktop ---------- */
 @media (max-width: 479px) {
   .header-actions .btn-header {
@@ -1047,6 +1114,14 @@ button {
 
   .section-title {
     font-size: 26px;
+  }
+
+  .top-review-grid {
+    flex-direction: row;
+  }
+
+  .top-review-card {
+    flex: 1;
   }
 
   .services-main {
