@@ -53,6 +53,74 @@
   color: var(--navy);
 }
 
+/* ---------- 実際の修理事例 ---------- */
+.rp-gallery-section {
+  padding: 0 0 24px;
+}
+
+.rp-gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.rp-gallery-item {
+  position: relative;
+  margin: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  aspect-ratio: 4 / 5;
+}
+
+.rp-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.rp-gallery-item.is-before img {
+  object-position: top;
+}
+
+.rp-gallery-tag {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 1;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  background: rgba(27, 42, 74, 0.75);
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.rp-gallery-tag.is-after {
+  background: var(--red);
+}
+
+.rp-gallery-caption {
+  margin: 0 0 4px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.6;
+  color: var(--navy);
+}
+
+.rp-gallery-note {
+  margin: 0;
+  text-align: center;
+  font-size: 10.5px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: var(--navy-soft);
+  opacity: 0.85;
+}
+
 /* ---------- 安心ポイント + CTA ---------- */
 .repair-trust-section {
   padding: 0 0 40px;
@@ -85,6 +153,12 @@
     flex-direction: row;
     max-width: 100%;
   }
+
+  .rp-gallery-grid {
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media (min-width: 960px) {
@@ -114,6 +188,10 @@
 
   .worry-check-item span {
     font-size: 14.5px;
+  }
+
+  .rp-gallery-section {
+    padding: 0 0 40px;
   }
 
   .repair-trust-section {
