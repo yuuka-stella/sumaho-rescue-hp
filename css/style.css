@@ -332,6 +332,12 @@ button {
   text-align: left;
 }
 
+.detail-hero-badge {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 12px;
+}
+
 .hero-local-badge {
   grid-area: badge;
   display: inline-flex;
