@@ -72,6 +72,16 @@ button {
   padding: 0 20px;
 }
 
+/* ---------- Rescue stripe ---------- */
+.rescue-stripe {
+  height: 5px;
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--navy) 0 12px,
+    var(--red) 12px 24px
+  );
+}
+
 /* ---------- Header ---------- */
 .site-header {
   position: sticky;
@@ -288,12 +298,26 @@ button {
   left: -80px;
 }
 
+.hero-diagonal {
+  position: absolute;
+  top: -50px;
+  right: -70px;
+  width: 260px;
+  height: 360px;
+  background: linear-gradient(155deg, var(--navy) 0%, var(--navy-soft) 100%);
+  clip-path: polygon(35% 0%, 100% 0%, 100% 100%, 0% 100%);
+  opacity: 0.07;
+  z-index: 0;
+  pointer-events: none;
+}
+
 .hero-inner {
   position: relative;
   z-index: 1;
   display: grid;
   grid-template-columns: 1fr auto;
   grid-template-areas:
+    "badge badge"
     "alert alert"
     "title title"
     "textblock side"
@@ -306,6 +330,30 @@ button {
   row-gap: 10px;
   align-items: start;
   text-align: left;
+}
+
+.hero-local-badge {
+  grid-area: badge;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  width: max-content;
+  max-width: 100%;
+  margin: 0;
+  padding: 5px 12px 5px 9px;
+  background: var(--navy);
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0;
+  border-radius: var(--radius-pill);
+}
+
+.hero-local-badge svg {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
 }
 
 /* Alert bubble */
@@ -443,7 +491,7 @@ button {
 
 .hero-side {
   grid-column: 2;
-  grid-row: 2 / span 2;
+  grid-row: 3 / span 2;
   width: 124px;
   display: flex;
   flex-direction: column;
@@ -1172,6 +1220,7 @@ button {
     display: grid;
     grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
     grid-template-areas:
+      "badge badge"
       "alert alert"
       "title side"
       "textblock side"
