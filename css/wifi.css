@@ -102,6 +102,68 @@
   color: var(--navy);
 }
 
+/* ---------- 選ばれる理由 ---------- */
+.benefits-section {
+  padding: 8px 0 28px;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.benefit-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-height: 190px;
+  background: var(--white);
+  border: 1px solid rgba(27, 42, 74, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 16px 10px;
+  box-shadow: 0 6px 14px rgba(27, 42, 74, 0.06);
+  text-align: center;
+}
+
+.benefit-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--red-light);
+  color: var(--red);
+  flex-shrink: 0;
+}
+
+.benefit-icon svg {
+  width: 56%;
+  height: 56%;
+}
+
+.benefit-card h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  min-height: 2.7em;
+  font-size: 12.5px;
+  font-weight: 800;
+  line-height: 1.4;
+  color: var(--navy);
+}
+
+.benefit-card p {
+  margin: 0;
+  font-size: 10.5px;
+  line-height: 1.6;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+
 /* ---------- ご案内できる回線・Wi-Fi ---------- */
 .detail-lineup-section {
   padding: 0 0 48px;
@@ -216,6 +278,30 @@
   .lineup-grid.is-single .lineup-card {
     max-width: 280px;
   }
+
+  .case-grid {
+    flex-direction: row;
+  }
+
+  .case-card {
+    flex: 1;
+  }
+
+  .voice-grid {
+    flex-direction: row;
+  }
+
+  .voice-card {
+    flex: 1;
+  }
+
+  .consult-cta-section .hero-ctas {
+    max-width: 600px;
+  }
+
+  .consult-cta-lead {
+    font-size: 17px;
+  }
 }
 
 @media (min-width: 960px) {
@@ -269,6 +355,33 @@
     font-size: 14.5px;
   }
 
+  .benefits-section {
+    padding: 12px 0 40px;
+  }
+
+  .benefits-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .benefit-card {
+    min-height: 210px;
+    padding: 22px 16px;
+  }
+
+  .benefit-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .benefit-card h3 {
+    font-size: 14px;
+  }
+
+  .benefit-card p {
+    font-size: 12px;
+  }
+
   .detail-lineup-section {
     padding: 0 0 64px;
   }
@@ -293,6 +406,234 @@
   .lineup-card-text strong {
     font-size: 15px;
   }
+
+  .case-section {
+    padding: 8px 0 40px;
+  }
+
+  .voice-section {
+    padding: 0 0 40px;
+  }
+
+  .case-note {
+    font-size: 12.5px;
+  }
+}
+
+/* ---------- 実際の料金診断事例 ---------- */
+.case-section {
+  padding: 4px 0 28px;
+}
+
+.case-note {
+  margin: 10px 0 18px;
+  text-align: center;
+  font-size: 11.5px;
+  line-height: 1.6;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+
+.case-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.case-card {
+  background: var(--white);
+  border: 1.5px solid var(--red-light);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  box-shadow: var(--shadow-soft);
+}
+
+.case-photo-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  aspect-ratio: 4 / 3;
+  border-radius: 14px;
+  background: var(--cream-deep);
+  border: 1.5px dashed rgba(27, 42, 74, 0.22);
+  color: var(--navy-soft);
+  margin: 0 0 12px;
+}
+
+.case-photo-placeholder svg {
+  width: 30px;
+  height: 30px;
+  color: var(--red);
+  opacity: 0.7;
+}
+
+.case-photo-placeholder span {
+  font-size: 11.5px;
+  font-weight: 700;
+}
+
+.case-profile {
+  margin: 0 0 12px;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--red-dark);
+}
+
+.case-stats {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 12px;
+}
+
+.case-stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 8px 10px;
+  background: var(--cream);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.case-stat-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--navy-soft);
+}
+
+.case-stat-value {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 900;
+  color: var(--navy);
+}
+
+.case-stat-value.is-after {
+  color: var(--red-dark);
+}
+
+.case-stat-arrow {
+  flex-shrink: 0;
+  font-size: 15px;
+  font-weight: 900;
+  color: var(--red);
+}
+
+.case-highlight {
+  margin: 0 0 14px;
+  padding: 8px 12px;
+  border-radius: var(--radius-pill);
+  background: var(--red-light);
+  color: var(--red-dark);
+  font-size: 12.5px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.case-highlight strong {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.case-point {
+  padding-top: 12px;
+  border-top: 1px dashed rgba(27, 42, 74, 0.15);
+}
+
+.case-point-label {
+  display: inline-block;
+  margin: 0 0 4px;
+  font-size: 10.5px;
+  font-weight: 800;
+  color: var(--navy);
+}
+
+.case-point p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.6;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+
+/* ---------- お客様の声 ---------- */
+.voice-section {
+  padding: 0 0 28px;
+}
+
+.voice-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.voice-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background: var(--white);
+  border: 1px solid rgba(27, 42, 74, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 18px 16px;
+  box-shadow: 0 6px 14px rgba(27, 42, 74, 0.06);
+  text-align: center;
+}
+
+.voice-avatar-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--cream-deep);
+  border: 1.5px dashed rgba(27, 42, 74, 0.22);
+  color: var(--navy-soft);
+}
+
+.voice-avatar-placeholder svg {
+  width: 50%;
+  height: 50%;
+}
+
+.voice-quote {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.7;
+  font-weight: 500;
+  color: var(--navy);
+}
+
+.voice-name {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--navy-soft);
+}
+
+/* ---------- ご相談CTA ---------- */
+.consult-cta-section {
+  padding: 0 0 40px;
+  text-align: center;
+}
+
+.consult-cta-lead {
+  margin: 0 0 18px;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.5;
+  color: var(--navy);
+}
+
+.consult-cta-section .hero-ctas {
+  max-width: 420px;
+  margin: 0 auto;
 }
 
 /* ---------- Footer ---------- */
