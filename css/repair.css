@@ -58,6 +58,18 @@
   padding: 0 0 24px;
 }
 
+.rp-gallery-set {
+  margin: 0 0 22px;
+}
+
+.rp-gallery-set-title {
+  margin: 0 0 10px;
+  text-align: center;
+  font-size: 13.5px;
+  font-weight: 800;
+  color: var(--red-dark);
+}
+
 .rp-gallery-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -121,6 +133,59 @@
   opacity: 0.85;
 }
 
+/* ---------- バッテリー膨張の注意喚起 ---------- */
+.rp-warning-section {
+  padding: 0 0 28px;
+}
+
+.rp-warning-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: var(--white);
+  border: 1.5px solid rgba(226, 52, 43, 0.25);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  box-shadow: var(--shadow-soft);
+}
+
+.rp-warning-photo {
+  width: 100%;
+  max-width: 260px;
+  margin: 0 auto;
+  border-radius: 14px;
+  display: block;
+}
+
+.rp-warning-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 8px;
+  font-size: 15.5px;
+  font-weight: 900;
+  color: var(--red-dark);
+}
+
+.rp-warning-title svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  color: var(--red);
+}
+
+.rp-warning-text p {
+  margin: 0 0 8px;
+  font-size: 12.5px;
+  line-height: 1.7;
+  font-weight: 500;
+  color: var(--navy);
+}
+
+.rp-warning-text p:last-child {
+  margin-bottom: 0;
+}
+
 /* ---------- 安心ポイント + CTA ---------- */
 .repair-trust-section {
   padding: 0 0 40px;
@@ -159,6 +224,19 @@
     margin-left: auto;
     margin-right: auto;
   }
+
+  .rp-warning-card {
+    flex-direction: row;
+    align-items: center;
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .rp-warning-photo {
+    max-width: 180px;
+    flex-shrink: 0;
+  }
 }
 
 @media (min-width: 960px) {
@@ -191,6 +269,10 @@
   }
 
   .rp-gallery-section {
+    padding: 0 0 40px;
+  }
+
+  .rp-warning-section {
     padding: 0 0 40px;
   }
 
