@@ -72,16 +72,6 @@ button {
   padding: 0 20px;
 }
 
-/* ---------- Rescue stripe ---------- */
-.rescue-stripe {
-  height: 5px;
-  background: repeating-linear-gradient(
-    -45deg,
-    var(--navy) 0 12px,
-    var(--red) 12px 24px
-  );
-}
-
 /* ---------- Header ---------- */
 .site-header {
   position: sticky;
