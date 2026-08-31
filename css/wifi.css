@@ -567,29 +567,3 @@
   max-width: 420px;
   margin: 0 auto;
 }
-
-/* ---------- Footer ---------- */
-.detail-footer {
-  background: var(--cream-deep);
-  border-top: 1px solid rgba(27, 42, 74, 0.08);
-  padding: 18px 0;
-}
-
-.detail-footer-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.detail-footer-logo img {
-  height: 30px;
-  width: auto;
-}
-
-.detail-footer-back {
-  font-size: 12.5px;
-  font-weight: 700;
-  color: var(--red-dark);
-}
