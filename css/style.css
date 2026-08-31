@@ -1182,6 +1182,18 @@ button {
     flex-direction: row;
   }
 
+  .hero-ctas:has(.hero-ctas-sub) {
+    flex-wrap: wrap;
+  }
+
+  .hero-ctas:has(.hero-ctas-sub) > .btn-cta.is-primary {
+    flex: 1 1 100%;
+  }
+
+  .hero-ctas-sub {
+    flex: 1 1 100%;
+  }
+
   .phone-text strong {
     font-size: 15px;
   }
@@ -1293,13 +1305,13 @@ button {
     align-self: center;
     align-items: center;
     width: 100%;
-    max-width: 220px;
+    max-width: 280px;
     margin: 0 auto;
   }
 
   .hero-figure {
     align-self: center;
-    width: 200px;
+    width: 260px;
   }
 
   .hero-hours-title {
@@ -1359,7 +1371,7 @@ button {
 
   .hero-figure {
     width: 100%;
-    max-width: 260px;
+    max-width: 280px;
     margin: 0 auto;
   }
 
@@ -1438,8 +1450,20 @@ button {
 }
 
 @media (min-width: 1180px) {
+  .container {
+    max-width: 1320px;
+  }
+
   .hero-title .title-huge {
     font-size: 104px;
+  }
+
+  .hero-side {
+    max-width: 320px;
+  }
+
+  .hero-figure {
+    max-width: 320px;
   }
 }
 
