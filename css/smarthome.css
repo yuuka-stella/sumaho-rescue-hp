@@ -1,0 +1,409 @@
+/* ===== スマートホーム 詳細ページ ===== */
+
+/* ---------- Detail hero ---------- */
+.detail-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 22px 0 32px;
+}
+
+.detail-hero-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "title figure"
+    "subcopy subcopy"
+    "ctas ctas";
+  column-gap: 14px;
+  row-gap: 14px;
+  align-items: start;
+  text-align: left;
+}
+
+.detail-title {
+  grid-area: title;
+  margin: 0;
+  font-size: 17px;
+  font-weight: 900;
+  line-height: 1.5;
+  color: var(--navy);
+  letter-spacing: 0;
+}
+
+.detail-title .accent {
+  color: var(--red);
+}
+
+.detail-figure {
+  grid-area: figure;
+  align-self: center;
+  width: 64px;
+  margin: 0;
+}
+
+.detail-figure img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 10px 16px rgba(226, 52, 43, 0.18));
+}
+
+.detail-subcopy {
+  grid-area: subcopy;
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.75;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+
+.detail-hero .hero-ctas {
+  grid-area: ctas;
+}
+
+/* ---------- こんな方におすすめ ---------- */
+.detail-worries-section {
+  padding: 8px 0 28px;
+}
+
+.worry-check-grid {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.worry-check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  background: var(--white);
+  border: 1px solid rgba(27, 42, 74, 0.08);
+  border-radius: 14px;
+  padding: 12px 10px;
+  box-shadow: 0 6px 14px rgba(27, 42, 74, 0.06);
+}
+
+.worry-check-item .check {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--red);
+}
+
+.worry-check-item span {
+  font-size: 12.5px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--navy);
+}
+
+/* ---------- ご紹介している機器 ---------- */
+.benefits-section {
+  padding: 8px 0 28px;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.benefit-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background: var(--white);
+  border: 1px solid rgba(27, 42, 74, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 20px 16px;
+  box-shadow: 0 6px 14px rgba(27, 42, 74, 0.06);
+  text-align: center;
+}
+
+.benefit-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--red-light);
+  color: var(--red);
+  flex-shrink: 0;
+}
+
+.benefit-icon svg {
+  width: 56%;
+  height: 56%;
+}
+
+.benefit-card h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.4;
+  color: var(--navy);
+}
+
+.benefit-card p {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.7;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+
+.benefit-card.has-photo {
+  padding: 0;
+  overflow: hidden;
+}
+
+.benefit-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+}
+
+.benefit-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.benefit-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
+  text-align: center;
+}
+
+/* ---------- 店舗で体験できます ---------- */
+.experience-section {
+  padding: 0 0 32px;
+}
+
+.experience-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--red-light);
+  border: 1.5px solid rgba(226, 52, 43, 0.25);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.experience-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+}
+
+.experience-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 30%;
+}
+
+.experience-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 20px;
+  text-align: center;
+}
+
+.experience-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--red);
+  color: var(--white);
+  flex-shrink: 0;
+  box-shadow: 0 8px 16px rgba(226, 52, 43, 0.25);
+}
+
+.experience-icon svg {
+  width: 55%;
+  height: 55%;
+}
+
+.experience-card h2 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 17px;
+  font-weight: 900;
+  color: var(--navy);
+  line-height: 1.5;
+}
+
+.experience-card p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.75;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+
+/* ---------- ご相談CTA ---------- */
+.consult-cta-section {
+  padding: 0 0 40px;
+  text-align: center;
+}
+
+.consult-cta-lead {
+  margin: 0 0 18px;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.5;
+  color: var(--navy);
+}
+
+.consult-cta-section .hero-ctas {
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+/* ---------- Responsive ---------- */
+@media (min-width: 720px) {
+  .detail-title {
+    font-size: 23px;
+  }
+
+  .detail-subcopy {
+    font-size: 15px;
+  }
+
+  .detail-figure {
+    width: 96px;
+  }
+
+  .detail-hero .hero-ctas {
+    flex-direction: row;
+  }
+
+  .worry-check-item span {
+    font-size: 13.5px;
+  }
+
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .experience-card {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .experience-photo {
+    width: 280px;
+    aspect-ratio: auto;
+    flex-shrink: 0;
+  }
+
+  .experience-body {
+    align-items: flex-start;
+    text-align: left;
+    padding: 28px 32px;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .consult-cta-section .hero-ctas {
+    max-width: 600px;
+  }
+
+  .consult-cta-lead {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 960px) {
+  .detail-hero {
+    padding: 48px 0 56px;
+  }
+
+  .detail-hero-inner {
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    grid-template-areas:
+      "title figure"
+      "subcopy figure"
+      "ctas figure";
+    column-gap: 48px;
+    row-gap: 18px;
+  }
+
+  .detail-title {
+    font-size: 36px;
+  }
+
+  .detail-subcopy {
+    font-size: 16px;
+    max-width: 34em;
+  }
+
+  .detail-figure {
+    width: 100%;
+    max-width: 220px;
+    margin: 0 auto;
+  }
+
+  .detail-hero .hero-ctas {
+    max-width: 480px;
+  }
+
+  .detail-worries-section {
+    padding: 12px 0 40px;
+  }
+
+  .worry-check-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .worry-check-item {
+    padding: 16px 14px;
+  }
+
+  .worry-check-item span {
+    font-size: 14.5px;
+  }
+
+  .benefits-section {
+    padding: 12px 0 40px;
+  }
+
+  .benefits-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .benefit-card {
+    padding: 28px 20px;
+  }
+
+  .benefit-icon {
+    width: 56px;
+    height: 56px;
+  }
+
+  .benefit-card h3 {
+    font-size: 16px;
+  }
+
+  .benefit-card p {
+    font-size: 13px;
+  }
+
+  .experience-section {
+    padding: 0 0 48px;
+  }
+}

@@ -72,16 +72,6 @@ button {
   padding: 0 20px;
 }
 
-/* ---------- Rescue stripe ---------- */
-.rescue-stripe {
-  height: 5px;
-  background: repeating-linear-gradient(
-    -45deg,
-    var(--navy) 0 12px,
-    var(--red) 12px 24px
-  );
-}
-
 /* ---------- Header ---------- */
 .site-header {
   position: sticky;
@@ -298,19 +288,6 @@ button {
   left: -80px;
 }
 
-.hero-diagonal {
-  position: absolute;
-  top: -50px;
-  right: -70px;
-  width: 260px;
-  height: 360px;
-  background: linear-gradient(155deg, var(--navy) 0%, var(--navy-soft) 100%);
-  clip-path: polygon(35% 0%, 100% 0%, 100% 100%, 0% 100%);
-  opacity: 0.07;
-  z-index: 0;
-  pointer-events: none;
-}
-
 .hero-inner {
   position: relative;
   z-index: 1;
@@ -342,23 +319,23 @@ button {
   grid-area: badge;
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
   width: max-content;
   max-width: 100%;
   margin: 0;
-  padding: 5px 12px 5px 9px;
+  padding: 8px 16px 8px 12px;
   background: var(--navy);
   color: var(--white);
   font-family: var(--font-heading);
-  font-size: 11px;
+  font-size: 14.5px;
   font-weight: 800;
   letter-spacing: 0;
   border-radius: var(--radius-pill);
 }
 
 .hero-local-badge svg {
-  width: 13px;
-  height: 13px;
+  width: 17px;
+  height: 17px;
   flex-shrink: 0;
 }
 
@@ -920,6 +897,10 @@ button {
   gap: 8px;
 }
 
+.services-main .service-card.is-main:last-child {
+  grid-column: 1 / -1;
+}
+
 .service-card {
   background: var(--white);
   border-radius: var(--radius-lg);
@@ -1087,6 +1068,127 @@ button {
   margin: 0 auto;
 }
 
+/* ---------- Instagram（TOP） ---------- */
+.insta-gallery-section {
+  padding: 8px 0 40px;
+}
+
+.insta-desc {
+  margin: 0 0 16px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+
+.insta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  max-width: 420px;
+  margin: 0 auto 18px;
+}
+
+.insta-photo {
+  display: block;
+  aspect-ratio: 1 / 1;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 14px rgba(27, 42, 74, 0.08);
+  transition: transform 0.15s ease;
+}
+
+.insta-photo:active {
+  transform: scale(0.96);
+}
+
+.insta-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.insta-cta {
+  display: flex;
+  width: max-content;
+  margin: 0 auto;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: var(--cream-deep);
+  border-top: 1px solid rgba(27, 42, 74, 0.08);
+  padding: 28px 0 20px;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.footer-logo {
+  height: 34px;
+  width: auto;
+}
+
+.footer-top-link {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--red-dark);
+}
+
+.footer-cols {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.footer-col h3 {
+  margin: 0 0 8px;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--red-dark);
+}
+
+.footer-col p {
+  margin: 0;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--navy-soft);
+  line-height: 1.6;
+}
+
+.footer-col ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-col ul a {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.footer-copy {
+  margin: 4px 0 0;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--navy-soft);
+  opacity: 0.8;
+}
+
 /* ---------- Responsive: tablet / desktop ---------- */
 @media (max-width: 479px) {
   .header-actions .btn-header {
@@ -1146,6 +1248,18 @@ button {
     flex-direction: row;
   }
 
+  .hero-ctas:has(.hero-ctas-sub) {
+    flex-wrap: wrap;
+  }
+
+  .hero-ctas:has(.hero-ctas-sub) > .btn-cta.is-primary {
+    flex: 1 1 100%;
+  }
+
+  .hero-ctas-sub {
+    flex: 1 1 100%;
+  }
+
   .phone-text strong {
     font-size: 15px;
   }
@@ -1178,8 +1292,17 @@ button {
     flex: 1;
   }
 
-  .services-main {
+  .insta-grid {
     grid-template-columns: repeat(4, 1fr);
+    max-width: 720px;
+  }
+
+  .services-main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .services-main .service-card.is-main:last-child {
+    grid-column: auto;
   }
 
   .service-card.is-main {
@@ -1201,6 +1324,10 @@ button {
 
   .services-sub {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .footer-cols {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -1252,13 +1379,13 @@ button {
     align-self: center;
     align-items: center;
     width: 100%;
-    max-width: 220px;
+    max-width: 280px;
     margin: 0 auto;
   }
 
   .hero-figure {
     align-self: center;
-    width: 200px;
+    width: 260px;
   }
 
   .hero-hours-title {
@@ -1318,7 +1445,7 @@ button {
 
   .hero-figure {
     width: 100%;
-    max-width: 260px;
+    max-width: 280px;
     margin: 0 auto;
   }
 
@@ -1394,11 +1521,34 @@ button {
   .service-card.is-sub h3 {
     font-size: 14.5px;
   }
+
+  .footer-inner {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  .footer-cols {
+    flex: 1 1 auto;
+  }
 }
 
 @media (min-width: 1180px) {
+  .container {
+    max-width: 1320px;
+  }
+
   .hero-title .title-huge {
     font-size: 104px;
+  }
+
+  .hero-side {
+    max-width: 320px;
+  }
+
+  .hero-figure {
+    max-width: 320px;
   }
 }
 
