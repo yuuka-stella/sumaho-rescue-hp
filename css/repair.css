@@ -186,6 +186,58 @@
   margin-bottom: 0;
 }
 
+/* ---------- 作業環境 ---------- */
+.rp-workshop-section {
+  padding: 0 0 28px;
+}
+
+.rp-workshop-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border: 1px solid rgba(27, 42, 74, 0.08);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+
+.rp-workshop-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+}
+
+.rp-workshop-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.rp-workshop-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 18px;
+  text-align: center;
+}
+
+.rp-workshop-body h2 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--navy);
+  line-height: 1.5;
+}
+
+.rp-workshop-body p {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.7;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+
 /* ---------- 安心ポイント + CTA ---------- */
 .repair-trust-section {
   padding: 0 0 40px;
@@ -237,6 +289,24 @@
     max-width: 180px;
     flex-shrink: 0;
   }
+
+  .rp-workshop-card {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .rp-workshop-photo {
+    width: 280px;
+    aspect-ratio: auto;
+    flex-shrink: 0;
+  }
+
+  .rp-workshop-body {
+    align-items: flex-start;
+    text-align: left;
+    padding: 24px 28px;
+    justify-content: center;
+  }
 }
 
 @media (min-width: 960px) {
@@ -274,6 +344,18 @@
 
   .rp-warning-section {
     padding: 0 0 40px;
+  }
+
+  .rp-workshop-section {
+    padding: 0 0 40px;
+  }
+
+  .rp-workshop-body h2 {
+    font-size: 19px;
+  }
+
+  .rp-workshop-body p {
+    font-size: 13.5px;
   }
 
   .repair-trust-section {
