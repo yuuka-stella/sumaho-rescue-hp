@@ -18,6 +18,10 @@
   overflow: hidden;
 }
 
+.faq-item:nth-child(even) {
+  background: var(--cream-deep);
+}
+
 .faq-item summary {
   list-style: none;
   cursor: pointer;

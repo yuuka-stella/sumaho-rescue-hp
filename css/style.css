@@ -332,23 +332,23 @@ button {
   grid-area: badge;
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
   width: max-content;
   max-width: 100%;
   margin: 0;
-  padding: 5px 12px 5px 9px;
+  padding: 8px 16px 8px 12px;
   background: var(--navy);
   color: var(--white);
   font-family: var(--font-heading);
-  font-size: 11px;
+  font-size: 14.5px;
   font-weight: 800;
   letter-spacing: 0;
   border-radius: var(--radius-pill);
 }
 
 .hero-local-badge svg {
-  width: 13px;
-  height: 13px;
+  width: 17px;
+  height: 17px;
   flex-shrink: 0;
 }
 
@@ -910,6 +910,10 @@ button {
   gap: 8px;
 }
 
+.services-main .service-card.is-main:last-child {
+  grid-column: 1 / -1;
+}
+
 .service-card {
   background: var(--white);
   border-radius: var(--radius-lg);
@@ -1307,7 +1311,11 @@ button {
   }
 
   .services-main {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .services-main .service-card.is-main:last-child {
+    grid-column: auto;
   }
 
   .service-card.is-main {
