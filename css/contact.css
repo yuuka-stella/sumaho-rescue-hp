@@ -50,6 +50,17 @@
   object-fit: cover;
 }
 
+.interior-message {
+  margin: 16px 0 0;
+  padding: 16px 18px;
+  background: var(--red-light);
+  border-radius: var(--radius-lg);
+  font-size: 12.5px;
+  line-height: 1.8;
+  font-weight: 500;
+  color: var(--navy);
+}
+
 /* ---------- 店舗営業時間 ---------- */
 .ct-hours-section {
   padding: 8px 0 20px;
@@ -603,14 +614,16 @@
   }
 
   .interior-gallery,
-  .access-photo {
+  .access-photo,
+  .interior-message {
     max-width: 640px;
     margin-left: auto;
     margin-right: auto;
   }
 
-  .interior-gallery {
-    margin-bottom: 0;
+  .interior-message {
+    margin-top: 16px;
+    font-size: 13.5px;
   }
 
   .access-photo {
