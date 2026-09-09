@@ -519,6 +519,8 @@
 @media (min-width: 720px) {
   .cl-title {
     font-size: 25px;
+    word-break: keep-all;
+    overflow-wrap: normal;
   }
 
   .cl-subhead {
