@@ -129,7 +129,7 @@ button {
 
 .btn-header.is-line {
   background: var(--line-green);
-  color: var(--white);
+  color: var(--navy);
 }
 
 .btn-header.is-line:hover {
@@ -312,7 +312,7 @@ button {
 .detail-hero-badge {
   position: relative;
   z-index: 1;
-  margin: 0 0 12px;
+  margin: 0 auto 12px;
 }
 
 .hero-local-badge {
@@ -569,7 +569,7 @@ button {
 
 .btn-cta.is-line {
   background: var(--line-green);
-  color: var(--white);
+  color: var(--navy);
 }
 
 .btn-cta.is-line:hover {
@@ -1561,4 +1561,15 @@ button {
   .hero-figure {
     animation: none;
   }
+}
+
+/* ---------- なおすけカーソル ---------- */
+a,
+button,
+summary,
+.btn-header,
+.btn-cta,
+.hamburger,
+.service-card {
+  cursor: url("../assets/cursor-helmet.png") 24 12, pointer;
 }

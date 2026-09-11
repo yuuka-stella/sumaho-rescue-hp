@@ -532,6 +532,10 @@
     flex-direction: row;
   }
 
+  .detail-hero .hero-ctas .btn-cta {
+    flex: 1;
+  }
+
   .ct2-about-desc {
     font-size: 15px;
   }
@@ -626,7 +630,7 @@
 
   .detail-figure {
     width: 100%;
-    max-width: 220px;
+    max-width: 260px;
     margin: 0 auto;
   }
 

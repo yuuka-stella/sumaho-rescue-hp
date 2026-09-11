@@ -365,6 +365,15 @@
   object-fit: cover;
 }
 
+.access-address {
+  margin: 0 0 14px;
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.5;
+  color: var(--navy);
+}
+
 .access-landmark {
   display: flex;
   align-items: center;
@@ -603,6 +612,10 @@
 
   .phone-card-main {
     justify-content: center;
+  }
+
+  .access-address {
+    font-size: 17px;
   }
 
   .access-landmark p {

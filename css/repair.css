@@ -4,6 +4,56 @@
   padding-top: 20px;
 }
 
+.repair-intro-section .services-main .service-card.is-main:last-child {
+  grid-column: auto;
+}
+
+.rp-hero-inner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "title figure"
+    "desc desc"
+    "note note"
+    "ctas ctas";
+  column-gap: 14px;
+  row-gap: 4px;
+  align-items: start;
+  text-align: left;
+}
+
+.rp-hero-title {
+  grid-area: title;
+  text-align: left;
+}
+
+.rp-hero-figure {
+  grid-area: figure;
+  align-self: center;
+  width: 64px;
+  margin: 0;
+}
+
+.rp-hero-figure img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 10px 16px rgba(226, 52, 43, 0.18));
+}
+
+.rp-hero-inner .repair-intro-desc {
+  grid-area: desc;
+  text-align: left;
+}
+
+.rp-hero-inner .rp-price-note {
+  grid-area: note;
+}
+
+.rp-hero-inner .repair-cta-top {
+  grid-area: ctas;
+  margin: 0;
+}
+
 .repair-intro-desc {
   margin: 0 0 18px;
   text-align: center;
@@ -11,6 +61,21 @@
   line-height: 1.75;
   font-weight: 500;
   color: var(--navy-soft);
+}
+
+.rp-price-note {
+  margin: 0 0 16px;
+  padding: 10px 14px;
+  background: var(--cream-deep);
+  border-radius: 12px;
+  text-align: center;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.repair-cta-top {
+  margin: 0 0 24px;
 }
 
 /* ---------- こんなお悩みありませんか ---------- */
@@ -238,6 +303,66 @@
   color: var(--navy-soft);
 }
 
+/* ---------- ご相談から修理完了までの流れ ---------- */
+.rp-flow-section {
+  padding: 0 0 28px;
+}
+
+.step-list {
+  position: relative;
+  list-style: none;
+  margin: 0 0 16px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.step-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--white);
+  border: 1.5px solid var(--red-light);
+  border-radius: 16px;
+  padding: 16px 18px;
+  box-shadow: var(--shadow-soft);
+}
+
+.step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--red);
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 900;
+  box-shadow: 0 6px 12px rgba(226, 52, 43, 0.25);
+}
+
+.step-text h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1.4;
+}
+
+.rp-flow-note {
+  margin: 0;
+  text-align: center;
+  font-size: 11px;
+  line-height: 1.6;
+  font-weight: 500;
+  color: var(--navy-soft);
+  opacity: 0.85;
+}
+
 /* ---------- 安心ポイント + CTA ---------- */
 .repair-trust-section {
   padding: 0 0 40px;
@@ -254,6 +379,18 @@
 
 /* ---------- Responsive ---------- */
 @media (min-width: 720px) {
+  .repair-intro-section .services-main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .rp-hero-title {
+    font-size: 25px;
+  }
+
+  .rp-hero-figure {
+    width: 96px;
+  }
+
   .repair-intro-desc {
     font-size: 15px;
   }
@@ -307,6 +444,27 @@
     padding: 24px 28px;
     justify-content: center;
   }
+
+  .step-list {
+    flex-direction: row;
+  }
+
+  .step-item {
+    flex: 1 1 0;
+    flex-direction: column;
+    text-align: center;
+    padding: 22px 16px;
+  }
+
+  .step-number {
+    width: 42px;
+    height: 42px;
+    font-size: 16px;
+  }
+
+  .step-text h3 {
+    font-size: 15.5px;
+  }
 }
 
 @media (min-width: 960px) {
@@ -314,11 +472,55 @@
     padding-top: 32px;
   }
 
+  .repair-intro-section .services-main {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
   .repair-intro-desc {
     font-size: 16px;
     max-width: 40em;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .rp-price-note {
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 13.5px;
+  }
+
+  .rp-hero-inner {
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    grid-template-areas:
+      "title figure"
+      "desc figure"
+      "note figure"
+      "ctas figure";
+    column-gap: 48px;
+    row-gap: 10px;
+  }
+
+  .rp-hero-title {
+    font-size: 34px;
+  }
+
+  .rp-hero-figure {
+    width: 100%;
+    max-width: 240px;
+    margin: 0 auto;
+  }
+
+  .rp-hero-inner .repair-intro-desc,
+  .rp-hero-inner .rp-price-note {
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+  }
+
+  .rp-hero-inner .repair-cta-top {
+    max-width: 480px;
   }
 
   .repair-worries-section {
@@ -369,5 +571,34 @@
 
   .repair-cta {
     max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .rp-flow-section {
+    padding: 0 0 40px;
+  }
+
+  .step-list {
+    max-width: 900px;
+    margin: 0 auto 16px;
+    gap: 16px;
+  }
+
+  .step-item {
+    padding: 26px 18px;
+  }
+
+  .step-number {
+    width: 46px;
+    height: 46px;
+    font-size: 17px;
+  }
+
+  .step-text h3 {
+    font-size: 16px;
+  }
+
+  .rp-flow-note {
+    font-size: 12px;
   }
 }

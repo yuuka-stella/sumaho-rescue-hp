@@ -539,6 +539,10 @@
     flex-direction: row;
   }
 
+  .cl-hero-ctas .btn-cta {
+    flex: 1;
+  }
+
   .cl-style-list {
     flex-direction: row;
   }
@@ -638,7 +642,7 @@
 
   .cl-figure {
     width: 100%;
-    max-width: 200px;
+    max-width: 260px;
     margin: 0 auto;
   }
 
