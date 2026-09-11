@@ -1562,3 +1562,14 @@ button {
     animation: none;
   }
 }
+
+/* ---------- なおすけカーソル ---------- */
+a,
+button,
+summary,
+.btn-header,
+.btn-cta,
+.hamburger,
+.service-card {
+  cursor: url("../assets/cursor-helmet.png") 24 12, pointer;
+}
