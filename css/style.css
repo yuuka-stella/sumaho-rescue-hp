@@ -1563,7 +1563,11 @@ button {
   }
 }
 
-/* ---------- なおすけカーソル ---------- */
+/* ---------- らぽカーソル ---------- */
+body {
+  cursor: url("../assets/cursor-rapo-face.png") 14 12, auto;
+}
+
 a,
 button,
 summary,
@@ -1571,5 +1575,5 @@ summary,
 .btn-cta,
 .hamburger,
 .service-card {
-  cursor: url("../assets/cursor-helmet.png") 24 12, pointer;
+  cursor: url("../assets/cursor-rapo-paw.png") 18 28, pointer;
 }
