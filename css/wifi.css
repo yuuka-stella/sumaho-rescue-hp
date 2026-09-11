@@ -265,6 +265,10 @@
     flex-direction: row;
   }
 
+  .detail-hero .hero-ctas .btn-cta {
+    flex: 1;
+  }
+
   .worry-check-item span {
     font-size: 13.5px;
   }

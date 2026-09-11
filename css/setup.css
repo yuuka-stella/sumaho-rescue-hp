@@ -671,6 +671,10 @@
     flex-direction: row;
   }
 
+  .st-hero-ctas .btn-cta {
+    flex: 1;
+  }
+
   .st-worry-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;

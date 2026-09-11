@@ -491,6 +491,10 @@
     flex-direction: row;
   }
 
+  .lic-hero-ctas .btn-cta {
+    flex: 1;
+  }
+
   .lic-cert-list {
     grid-template-columns: repeat(4, 1fr);
     gap: 12px;

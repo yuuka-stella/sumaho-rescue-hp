@@ -532,6 +532,10 @@
     flex-direction: row;
   }
 
+  .detail-hero .hero-ctas .btn-cta {
+    flex: 1;
+  }
+
   .ct2-about-desc {
     font-size: 15px;
   }
