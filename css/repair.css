@@ -4,6 +4,10 @@
   padding-top: 20px;
 }
 
+.repair-intro-section .services-main .service-card.is-main:last-child {
+  grid-column: auto;
+}
+
 .rp-hero-inner {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -375,6 +379,10 @@
 
 /* ---------- Responsive ---------- */
 @media (min-width: 720px) {
+  .repair-intro-section .services-main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .rp-hero-title {
     font-size: 25px;
   }
@@ -452,6 +460,10 @@
 @media (min-width: 960px) {
   .repair-intro-section {
     padding-top: 32px;
+  }
+
+  .repair-intro-section .services-main {
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .repair-intro-desc {
