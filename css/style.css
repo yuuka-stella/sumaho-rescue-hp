@@ -129,7 +129,7 @@ button {
 
 .btn-header.is-line {
   background: var(--line-green);
-  color: var(--white);
+  color: var(--navy);
 }
 
 .btn-header.is-line:hover {
@@ -569,7 +569,7 @@ button {
 
 .btn-cta.is-line {
   background: var(--line-green);
-  color: var(--white);
+  color: var(--navy);
 }
 
 .btn-cta.is-line:hover {
