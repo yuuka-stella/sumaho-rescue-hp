@@ -36,6 +36,12 @@
   color: var(--red);
 }
 
+@media (min-width: 720px) {
+  .detail-title .accent {
+    white-space: nowrap;
+  }
+}
+
 .detail-figure {
   grid-area: figure;
   align-self: center;
@@ -510,6 +516,8 @@
 @media (min-width: 720px) {
   .detail-title {
     font-size: 25px;
+    word-break: keep-all;
+    overflow-wrap: normal;
   }
 
   .detail-subcopy {

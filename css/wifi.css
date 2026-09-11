@@ -249,6 +249,8 @@
 @media (min-width: 720px) {
   .detail-title {
     font-size: 23px;
+    word-break: keep-all;
+    overflow-wrap: normal;
   }
 
   .detail-subcopy {
