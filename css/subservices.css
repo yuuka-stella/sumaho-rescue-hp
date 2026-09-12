@@ -4,6 +4,10 @@
   padding-top: 20px;
 }
 
+.sub-intro-section .services-main .service-card.is-main:last-child {
+  grid-column: auto;
+}
+
 .sub-intro-desc {
   margin: 0 0 18px;
   text-align: center;
@@ -69,6 +73,10 @@
 
 /* ---------- Responsive ---------- */
 @media (min-width: 720px) {
+  .sub-intro-section .services-main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .sub-intro-desc {
     font-size: 15px;
   }
@@ -90,6 +98,10 @@
 @media (min-width: 960px) {
   .sub-intro-section {
     padding-top: 32px;
+  }
+
+  .sub-intro-section .services-main {
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .sub-intro-desc {
