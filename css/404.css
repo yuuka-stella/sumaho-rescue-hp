@@ -1,0 +1,109 @@
+/* ===== 404 ページ ===== */
+
+.nf-section {
+  padding: 32px 0 48px;
+}
+
+.nf-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.nf-code {
+  margin: 0 0 4px;
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  color: var(--red);
+  opacity: 0.7;
+}
+
+.nf-figure {
+  width: 140px;
+  margin: 0 0 8px;
+}
+
+.nf-figure img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 10px 16px rgba(226, 52, 43, 0.18));
+}
+
+.nf-title {
+  margin: 0 0 10px;
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 900;
+  color: var(--navy);
+}
+
+.nf-desc {
+  margin: 0 0 24px;
+  font-size: 13px;
+  line-height: 1.75;
+  font-weight: 500;
+  color: var(--navy-soft);
+  max-width: 32em;
+}
+
+.nf-ctas {
+  width: 100%;
+  max-width: 360px;
+  margin: 0 0 28px;
+}
+
+.nf-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  max-width: 520px;
+}
+
+.nf-links a {
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+  background: var(--white);
+  border: 1px solid rgba(27, 42, 74, 0.12);
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--navy-soft);
+}
+
+/* ---------- Responsive ---------- */
+@media (min-width: 720px) {
+  .nf-section {
+    padding: 56px 0 72px;
+  }
+
+  .nf-figure {
+    width: 180px;
+  }
+
+  .nf-title {
+    font-size: 26px;
+  }
+
+  .nf-desc {
+    font-size: 14.5px;
+  }
+
+  .nf-ctas {
+    flex-direction: row;
+    max-width: 480px;
+  }
+}
+
+@media (min-width: 960px) {
+  .nf-title {
+    font-size: 30px;
+  }
+
+  .nf-desc {
+    font-size: 15px;
+  }
+}
