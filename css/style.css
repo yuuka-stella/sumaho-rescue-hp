@@ -1429,13 +1429,15 @@ button {
   }
 
   .hero-inner .trust-list {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    gap: 8px;
     align-self: stretch;
     max-width: none;
   }
 
   .hero-inner .trust-list li {
     font-size: 12px;
+    white-space: nowrap;
   }
 
   .hero-closing {
