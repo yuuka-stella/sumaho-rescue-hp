@@ -468,6 +468,17 @@
   font-weight: 700;
 }
 
+.case-photo {
+  display: block;
+  width: 100%;
+  max-height: 360px;
+  object-fit: contain;
+  border-radius: 14px;
+  background: var(--white);
+  border: 1px solid rgba(27, 42, 74, 0.12);
+  margin: 0 0 12px;
+}
+
 .case-profile {
   margin: 0 0 12px;
   font-size: 12px;
