@@ -137,22 +137,22 @@ button {
 }
 
 .btn-header.is-tel {
-  background: var(--red);
-  color: var(--white);
-}
-
-.btn-header.is-tel:hover {
-  background: var(--red-dark);
-}
-
-.btn-header.is-web {
   background: var(--white);
   border: 1.5px solid var(--navy);
   color: var(--navy);
 }
 
-.btn-header.is-web:hover {
+.btn-header.is-tel:hover {
   background: rgba(27, 42, 74, 0.06);
+}
+
+.btn-header.is-web {
+  background: var(--red);
+  color: var(--white);
+}
+
+.btn-header.is-web:hover {
+  background: var(--red-dark);
 }
 
 .btn-header-icon {
@@ -577,19 +577,36 @@ button {
 }
 
 .btn-cta.is-tel {
-  background: var(--red);
-  color: var(--white);
-}
-
-.btn-cta.is-tel:hover {
-  filter: brightness(1.05);
-}
-
-.btn-cta.is-web {
   background: var(--white);
   border: 1.5px solid var(--navy);
   color: var(--navy);
   box-shadow: none;
+}
+
+.btn-cta.is-tel:hover {
+  background: rgba(27, 42, 74, 0.06);
+}
+
+.btn-cta.is-web {
+  background: var(--red);
+  color: var(--white);
+}
+
+.btn-cta.is-web:hover {
+  filter: brightness(1.05);
+}
+
+.btn-cta.is-web.insta-cta,
+.btn-cta.is-web.top-reviews-more {
+  background: var(--white);
+  border: 1.5px solid var(--navy);
+  color: var(--navy);
+  box-shadow: none;
+}
+
+.btn-cta.is-web.insta-cta:hover,
+.btn-cta.is-web.top-reviews-more:hover {
+  background: rgba(27, 42, 74, 0.06);
 }
 
 .btn-cta.is-primary {
