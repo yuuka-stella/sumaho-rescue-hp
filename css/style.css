@@ -1360,8 +1360,7 @@ button {
       "textblock side"
       "worries worries"
       "ctas ctas"
-      "phone phone"
-      "trust trust"
+      "phone trust"
       "closing closing";
     column-gap: 48px;
     row-gap: 14px;
@@ -1427,6 +1426,16 @@ button {
 
   .trust-list {
     grid-area: trust;
+  }
+
+  .hero-inner .trust-list {
+    grid-template-columns: repeat(2, 1fr);
+    align-self: stretch;
+    max-width: none;
+  }
+
+  .hero-inner .trust-list li {
+    font-size: 12px;
   }
 
   .hero-closing {
