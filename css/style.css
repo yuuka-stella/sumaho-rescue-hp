@@ -1390,12 +1390,22 @@ button {
   }
 
   .hero-hours-title {
-    font-size: 12px;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .hours-card.is-mini {
+    padding: 6px 20px;
+  }
+
+  .hours-card.is-mini .hours-row {
+    padding: 14px 0;
   }
 
   .hours-card.is-mini .hours-day,
   .hours-card.is-mini .hours-time {
-    font-size: 11px;
+    font-size: 15px;
+    white-space: normal;
   }
 
   .hero-subcopy {
