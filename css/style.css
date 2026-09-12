@@ -137,22 +137,22 @@ button {
 }
 
 .btn-header.is-tel {
-  background: var(--red);
-  color: var(--white);
-}
-
-.btn-header.is-tel:hover {
-  background: var(--red-dark);
-}
-
-.btn-header.is-web {
   background: var(--white);
   border: 1.5px solid var(--navy);
   color: var(--navy);
 }
 
-.btn-header.is-web:hover {
+.btn-header.is-tel:hover {
   background: rgba(27, 42, 74, 0.06);
+}
+
+.btn-header.is-web {
+  background: var(--red);
+  color: var(--white);
+}
+
+.btn-header.is-web:hover {
+  background: var(--red-dark);
 }
 
 .btn-header-icon {
@@ -577,19 +577,36 @@ button {
 }
 
 .btn-cta.is-tel {
-  background: var(--red);
-  color: var(--white);
-}
-
-.btn-cta.is-tel:hover {
-  filter: brightness(1.05);
-}
-
-.btn-cta.is-web {
   background: var(--white);
   border: 1.5px solid var(--navy);
   color: var(--navy);
   box-shadow: none;
+}
+
+.btn-cta.is-tel:hover {
+  background: rgba(27, 42, 74, 0.06);
+}
+
+.btn-cta.is-web {
+  background: var(--red);
+  color: var(--white);
+}
+
+.btn-cta.is-web:hover {
+  filter: brightness(1.05);
+}
+
+.btn-cta.is-web.insta-cta,
+.btn-cta.is-web.top-reviews-more {
+  background: var(--white);
+  border: 1.5px solid var(--navy);
+  color: var(--navy);
+  box-shadow: none;
+}
+
+.btn-cta.is-web.insta-cta:hover,
+.btn-cta.is-web.top-reviews-more:hover {
+  background: rgba(27, 42, 74, 0.06);
 }
 
 .btn-cta.is-primary {
@@ -1360,8 +1377,7 @@ button {
       "textblock side"
       "worries worries"
       "ctas ctas"
-      "phone phone"
-      "trust trust"
+      "phone trust"
       "closing closing";
     column-gap: 48px;
     row-gap: 14px;
@@ -1390,12 +1406,22 @@ button {
   }
 
   .hero-hours-title {
-    font-size: 12px;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .hours-card.is-mini {
+    padding: 6px 20px;
+  }
+
+  .hours-card.is-mini .hours-row {
+    padding: 14px 0;
   }
 
   .hours-card.is-mini .hours-day,
   .hours-card.is-mini .hours-time {
-    font-size: 11px;
+    font-size: 15px;
+    white-space: normal;
   }
 
   .hero-subcopy {
@@ -1417,6 +1443,18 @@ button {
 
   .trust-list {
     grid-area: trust;
+  }
+
+  .hero-inner .trust-list {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    align-self: stretch;
+    max-width: none;
+  }
+
+  .hero-inner .trust-list li {
+    font-size: 12px;
+    white-space: nowrap;
   }
 
   .hero-closing {

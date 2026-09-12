@@ -405,7 +405,7 @@
 
   .repair-cta {
     flex-direction: row;
-    max-width: 100%;
+    max-width: 640px;
   }
 
   .rp-gallery-grid {
@@ -570,7 +570,7 @@
   }
 
   .repair-cta {
-    max-width: 480px;
+    max-width: 640px;
     margin: 0 auto;
   }
 
