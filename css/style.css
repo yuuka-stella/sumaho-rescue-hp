@@ -37,7 +37,6 @@ body {
   background: linear-gradient(180deg, var(--white) 0%, var(--cream) 55%, var(--cream-deep) 100%);
   -webkit-font-smoothing: antialiased;
   letter-spacing: 0.01em;
-  word-break: keep-all;
   overflow-wrap: break-word;
 }
 
@@ -561,6 +560,7 @@ button {
   font-weight: 800;
   border: none;
   cursor: pointer;
+  word-break: keep-all;
   box-shadow: var(--shadow-btn);
   transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
 }
