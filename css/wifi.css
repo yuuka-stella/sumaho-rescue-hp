@@ -566,6 +566,17 @@
   color: var(--navy-soft);
 }
 
+@media (min-width: 720px) {
+  .case-grid {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .case-card {
+    flex: 1;
+  }
+}
+
 /* ---------- ご相談CTA ---------- */
 .consult-cta-section {
   padding: 0 0 40px;
