@@ -450,7 +450,8 @@ button {
   color: var(--navy);
 }
 
-.hero-subcopy .subcopy-lead {
+.hero-subcopy .subcopy-lead,
+.hero-subcopy .subcopy-pre {
   font-size: 13.5px;
   line-height: 1.5;
   letter-spacing: -0.005em;
@@ -460,9 +461,15 @@ button {
   color: var(--red);
 }
 
+.subcopy-combo {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  flex-wrap: nowrap;
+}
+
 .hero-subcopy .underline-group {
   display: inline-block;
-  align-self: flex-start;
   font-size: 60px;
   font-weight: 900;
   line-height: 1;
@@ -1259,7 +1266,8 @@ button {
     font-size: 72px;
   }
 
-  .hero-subcopy .subcopy-lead {
+  .hero-subcopy .subcopy-lead,
+  .hero-subcopy .subcopy-pre {
     font-size: 17px;
     letter-spacing: normal;
   }
@@ -1489,7 +1497,8 @@ button {
     font-size: 92px;
   }
 
-  .hero-subcopy .subcopy-lead {
+  .hero-subcopy .subcopy-lead,
+  .hero-subcopy .subcopy-pre {
     font-size: 19px;
   }
 
