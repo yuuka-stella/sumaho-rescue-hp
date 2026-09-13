@@ -473,6 +473,7 @@ button {
   font-size: 60px;
   font-weight: 900;
   line-height: 1;
+  white-space: nowrap;
   border-bottom: 6px solid var(--yellow-deep);
   border-radius: 2px;
   padding-bottom: 4px;
