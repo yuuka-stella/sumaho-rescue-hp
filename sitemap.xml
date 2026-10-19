@@ -1,51 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://your-domain-here.com/</loc>
+    <loc>https://sumaho-rescue-kagoshima.com/</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://your-domain-here.com/wifi.html</loc>
+    <loc>https://sumaho-rescue-kagoshima.com/wifi.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://your-domain-here.com/repair.html</loc>
+    <loc>https://sumaho-rescue-kagoshima.com/repair.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://your-domain-here.com/smarthome.html</loc>
+    <loc>https://sumaho-rescue-kagoshima.com/smarthome.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://your-domain-here.com/subservices.html</loc>
+    <loc>https://sumaho-rescue-kagoshima.com/subservices.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://your-domain-here.com/coating.html</loc>
+    <loc>https://sumaho-rescue-kagoshima.com/coating.html</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://your-domain-here.com/class.html</loc>
+    <loc>https://sumaho-rescue-kagoshima.com/class.html</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://your-domain-here.com/license.html</loc>
+    <loc>https://sumaho-rescue-kagoshima.com/license.html</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://your-domain-here.com/setup.html</loc>
+    <loc>https://sumaho-rescue-kagoshima.com/setup.html</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://your-domain-here.com/first-visit.html</loc>
+    <loc>https://sumaho-rescue-kagoshima.com/first-visit.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://your-domain-here.com/contact.html</loc>
+    <loc>https://sumaho-rescue-kagoshima.com/contact.html</loc>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://your-domain-here.com/faq.html</loc>
+    <loc>https://sumaho-rescue-kagoshima.com/faq.html</loc>
     <priority>0.5</priority>
   </url>
 </urlset>
